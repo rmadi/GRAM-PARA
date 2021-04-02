@@ -7,11 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! /Users/achref/Desktop/Projects/GRAM-PARA/client/src/polyfills.ts */"hN/g");
-=======
-module.exports = __webpack_require__(/*! C:\Users\RMADI\OneDrive\Bureau\Greenfield\GRAM-PARA\client\src\polyfills.ts */"hN/g");
->>>>>>> 7a9a5357e9c0bc6de5e58e935f7fc99720327cc9
+module.exports = __webpack_require__(/*! C:\Users\DELL POSTE N° 02\Desktop\GRAM-PARA-rihem\client\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
