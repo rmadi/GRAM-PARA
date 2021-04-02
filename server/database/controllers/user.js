@@ -28,25 +28,22 @@ addUser :  (req,res) => {
        city: req.body.city,
        address1: req.body.address1,
        address1: req.body.address1,
-       address2: req.body.address2,
        zipCode: req.body.zipCode,
        role: req.body.role,
     })
-     User.save(() => {
+     user.save(() => {
     res.send(user)
 })
 },
 
  editUser :  (req,res) => {
-     User.updateOne({ '_id': req.params.id }, req.body, (err, result) => {
+     User.updateOne(  {'_id': req.params.id },  req.body, (err, result) => {
          if (err) {
              res.status(400).send('id dont exist')
              return
          }
          res.status(200).send('message updated')
      })
-        
-    
 },
 
 
@@ -58,8 +55,6 @@ addUser :  (req,res) => {
          }
          res.status(200).send({"message":"User deleted successfully"})
      })
-        
-    
-    }
+             }
 }
 
