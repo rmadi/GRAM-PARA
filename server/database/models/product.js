@@ -7,6 +7,9 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number
     },
+    pricePromo: {
+        type: Number
+    },
     imageUrl: {
         type: String
     },
@@ -15,6 +18,12 @@ const productSchema = new mongoose.Schema({
     },
     producer: {
         type: String
+    },
+    category: {
+        type: String
+    },
+    stock: {
+        
     }
     
 })
