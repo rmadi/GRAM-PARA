@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\DELL POSTE N° 02\Desktop\GRAM-PARA-rihem\client\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\DELL POSTE N° 02\Desktop\GRAM-PARA\client\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
