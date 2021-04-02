@@ -7,7 +7,11 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+module.exports = __webpack_require__(/*! /Users/achref/Desktop/Projects/GRAM-PARA/client/src/main.ts */"zUnb");
+=======
 module.exports = __webpack_require__(/*! C:\Users\RMADI\OneDrive\Bureau\Greenfield\GRAM-PARA\client\src\main.ts */"zUnb");
+>>>>>>> 7a9a5357e9c0bc6de5e58e935f7fc99720327cc9
 
 
 /***/ }),
@@ -62,7 +66,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "hello my para");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["h1[_ngcontent-%COMP%]{\r\n    color: greenyellow\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0k7QUFDSiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxe1xyXG4gICAgY29sb3I6IGdyZWVueWVsbG93XHJcbn0iXX0= */"] });
+    } }, styles: ["h1[_ngcontent-%COMP%]{\n    color: greenyellow\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0k7QUFDSiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxe1xuICAgIGNvbG9yOiBncmVlbnllbGxvd1xufSJdfQ== */"] });
 
 
 /***/ }),
