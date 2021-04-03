@@ -21,6 +21,7 @@
     color: #fff;
     background: #f13340;
     border: 1px solid #d02a2c;
+    
 }
 #old_price {
     padding-bottom: 15px;
@@ -29,4 +30,14 @@
     display: inline-block;
     font-family: open sans,sans-serif;
     line-height: 23px;
+}
+.primary_block {
+    margin-bottom: 60px;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-xs-12 {
+    width: 100%;
 }
