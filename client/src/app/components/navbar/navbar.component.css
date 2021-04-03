@@ -1,0 +1,119 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    margin: 0px;
+    padding: 0px;
+  }
+  /* .nav-pos{
+    position: relative;
+    left: 430px;
+  } */
+  .form-control{
+    width: 400px;
+
+  }
+  .form-pos-nav{
+    position: relative;
+    right: 800px;
+  }
+  nav {
+    margin: auto;
+        width: 100%;
+    background-color: #00a86b;
+    align-items: center;
+  }
+  nav > ul {
+    margin-left :95px;
+    padding: 0px;
+  }
+  
+  nav > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  nav > ul > li {
+    float: left;
+    position: relative;
+  }
+  nav > ul > li > a {
+    padding: 20px 30px;
+    color: #fff;
+  }
+  nav > ul > li:hover a {
+    padding: 15px 30px 20px 30px;
+  }
+  nav li {
+    list-style-type: none;
+  }
+  
+  .submenu {
+    display: none;
+  }
+  nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    cursor: grab;
+  }
+  
+  nav li:hover .submenu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    padding: 0px;
+    z-index: 1000;
+  }
+  .submenu li {
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(241, 242, 246,0.9);
+  }
+  .submenu li a {
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #222538;
+    width: 270px;
+  }
+  .menu-skin:hover {
+    border-top: 5px solid #0b6623;
+    background-color: #0cc796;
+  }
+  
+  
+  .menu-skin .submenu li :hover {
+    border-bottom: 0.5px solid #0b6623;
+    background-color: white;
+    color: #0b6623;
+    font-weight: 500;
+    font-size: 14px;
+    }
+
+  .menu-hair .submenu li :hover {
+    border-bottom: 0.5px solid #0b6623;
+    }
+   
+    
+  .submenu:hover a {
+      color: #000;
+      font-weight: bold;
+    }
+    
+    
+    #nav-mobile{
+      display: none;
+    }
+    @media screen and (max-width: 1280px) {
+      #nav-mobile{
+        display: block;
+      }
+      #nav-pc{
+        display: none;
+      }
+    }
+  
+  
+    /* a.active, a:hover{
+        background-color: seagreen;
+        transition: .5s;
+    } */
+  
