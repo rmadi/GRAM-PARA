@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\RMADI\OneDrive\Bureau\Greenfield\GRAM-PARA\client\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\RMADI\OneDrive\Bureau\greenfiled\GRAM-PARA\client\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
