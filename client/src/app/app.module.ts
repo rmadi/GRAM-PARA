@@ -6,11 +6,22 @@ import { AppComponent } from './app.component';
 import { CategoriePageComponent } from './components/categorie-page/categorie-page.component';
 import { ItemCardComponent } from './components/item-card/item-card.component';
 
+import { NavbarComponent } from './components/navbar/navbar.component';
+import {ProductComponent} from './components/product/product.component'
+
+
 @NgModule({
   declarations: [
     AppComponent,
+
     CategoriePageComponent,
-    ItemCardComponent
+    ItemCardComponent,
+
+    NavbarComponent,
+    ProductComponent
+
+    
+
   ],
   imports: [
     BrowserModule,
