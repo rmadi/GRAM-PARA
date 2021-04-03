@@ -116,4 +116,7 @@ body {
         background-color: seagreen;
         transition: .5s;
     } */
+    #nav-pc {
+      background: linear-gradient(105deg, #0cc796,#0b6623, #0cc796);
   
+    }
