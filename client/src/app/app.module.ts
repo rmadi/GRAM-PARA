@@ -6,21 +6,28 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {ProductComponent} from './components/product/product.component'
 
-import { CarouselPauseComponent } from './components/carousel-pause/carousel-pause.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomePageComponent } from './components/home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarouselPauseComponent,
+  
     NavbarComponent,
-    ProductComponent
+    ProductComponent,
+    HomePageComponent,
+
+
 
     
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
