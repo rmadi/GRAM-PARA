@@ -1,4 +1,10 @@
 
+footer{
+    position: relative;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
 a,
 a:hover,
 a:focus,
@@ -38,7 +44,7 @@ section {
    /* min-height: 100vh;*/
 }
 .footer {
-background: linear-gradient(105deg,#6e99e6 ,#093c94);
+background: linear-gradient(105deg, #0cc796,#0b6623, #0cc796);
 padding-top: 80px;
 padding-bottom: 40px;
 }
@@ -76,7 +82,7 @@ line-height: 36px;
 font-size: 15px;
 text-transform: capitalize;
 }
-.single_footer ul li a:hover { color: #ff3666; }
+.single_footer ul li a:hover { color: #01c7e9; }
 
 .single_footer_address ul li{color:#fff;}
 .single_footer_address ul li span {
@@ -120,7 +126,7 @@ width: 100%;
 .subscribe__btn {
 background-color: transparent;
 border-radius: 0 25px 25px 0;
-color: #01c7e9;
+color: #0b6623;
 cursor: pointer;
 display: block;
 font-size: 20px;
@@ -181,8 +187,8 @@ line-height:40px;
 }
 }
 .social_profile ul li a:hover{
-background:#ff3666;
-border: 1px solid #ff3666;
+background:#01c7e9;
+border: 1px solid #e90162;
 color:#fff;
 border:0px;
 }
@@ -196,4 +202,6 @@ border-top: 1px solid rgba(255,255,255,0.4);
 text-align: center;
 }
 .copyright a{color:#01c7e9;transition: all 0.2s ease 0s;}
-.copyright a:hover{color:#ff3666;}
+.copyright a:hover{color:#e90162;
+font-size: 16px;
+transition: all .5s ease 0s;}
