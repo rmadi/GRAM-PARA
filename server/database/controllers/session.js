@@ -20,7 +20,9 @@ module.exports = {
 
 addSession :  (req,res) => {
    const  session = new Session({
-      email: req.body.email,
+       userId: req.body.userId,
+       session: req.body.session,
+       date: req.body.date
     })
      session.save(() => {
     res.send(session)
