@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
+
+import { CarouselPauseComponent } from './components/carousel-pause/carousel-pause.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    CarouselPauseComponent
   ],
   imports: [
     BrowserModule,
