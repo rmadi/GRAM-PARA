@@ -1,7 +1,7 @@
 .card-promo {
     display:flex;
     padding-left: 360px;
-    height: 70%;
+    height: 550px;
     
 }
 
@@ -59,6 +59,7 @@ img {
 .card-sold {
     display:flex;
     padding-left: 360px;
+    height : 550px;
     
     
 }
