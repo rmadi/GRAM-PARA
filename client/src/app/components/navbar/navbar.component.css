@@ -3,14 +3,22 @@ body {
     margin: 0px;
     padding: 0px;
   }
+  .btn-search-pos{
+    position: relative;
+    left: 220px;
+  }
+  .div-search-cont{
+    position: relative;
+    left: 250px;
+  }
   .div-btn-pos{
     /* position: relative; */
     /* right: -150px; */
     float: left;
   }
-  .nav-pos{
-    /* /* position:relative; */
-    /* right: 450px; */ 
+  .div-price{
+    position:relative; 
+    right: 50px;
  }
   .form-control{
     width: 400px;

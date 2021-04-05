@@ -8,7 +8,8 @@ import { ItemCardComponent } from './components/item-card/item-card.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {ProductComponent} from './components/product/product.component';
-import { FootbarComponent } from './components/footbar/footbar.component'
+import { FootbarComponent } from './components/footbar/footbar.component';
+import { RegisterComponent } from './components/register/register.component'
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FootbarComponent } from './components/footbar/footbar.component'
     NavbarComponent,
     ProductComponent,
     FootbarComponent,
+    RegisterComponent,
 
     
 
