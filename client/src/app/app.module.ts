@@ -12,7 +12,11 @@ import { FootbarComponent } from './components/footbar/footbar.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+import { HomePageComponent } from './components/home-page/home-page.component';
 
+
+
+  
 
 @NgModule({
   declarations: [
@@ -24,7 +28,13 @@ import { HttpClientModule } from '@angular/common/http';
 
     NavbarComponent,
     ProductComponent,
+
+    HomePageComponent,
+
+
+
     FootbarComponent,
+
 
     
 
@@ -32,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
