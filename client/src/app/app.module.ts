@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { SinginComponent } from './components/singin/singin.component';
 
 
 
@@ -36,6 +37,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 
     FootbarComponent,
     RegisterComponent,
+    SinginComponent,
 
 
     
