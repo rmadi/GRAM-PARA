@@ -8,7 +8,10 @@ import { ItemCardComponent } from './components/item-card/item-card.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {ProductComponent} from './components/product/product.component';
-import { FootbarComponent } from './components/footbar/footbar.component'
+import { FootbarComponent } from './components/footbar/footbar.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -17,6 +20,7 @@ import { FootbarComponent } from './components/footbar/footbar.component'
 
     CategoriePageComponent,
     ItemCardComponent,
+
 
     NavbarComponent,
     ProductComponent,
@@ -27,7 +31,8 @@ import { FootbarComponent } from './components/footbar/footbar.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
