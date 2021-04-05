@@ -11,6 +11,14 @@ import {ProductComponent} from './components/product/product.component';
 import { FootbarComponent } from './components/footbar/footbar.component'
 
 
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomePageComponent } from './components/home-page/home-page.component';
+
+
+
+  
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,16 +26,24 @@ import { FootbarComponent } from './components/footbar/footbar.component'
     CategoriePageComponent,
     ItemCardComponent,
 
+
     NavbarComponent,
     ProductComponent,
+
+    HomePageComponent,
+
+
+
     FootbarComponent,
+
 
     
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
