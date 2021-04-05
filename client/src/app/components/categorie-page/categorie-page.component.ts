@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ProductService} from '../../services/product.service';
 
 
 
@@ -10,12 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriePageComponent implements OnInit {
 
-  constructor() { 
+  products:any=[]
+  constructor(private prodservice: ProductService) { 
 
   }
 
   ngOnInit(): void {
-    
+    this.getproducts()
+  }
+
+  getproducts() {
+    this.prodservice.getproduct().subscribe((data) => {
+      this.products=data
+      console.log('gaston',data)
+    })
   }
 
 }

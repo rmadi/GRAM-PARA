@@ -11,6 +11,6 @@ export class ProductService {
   constructor(private http: HttpClient) {
   }
   getproduct() {
-     return this.http.get("http://localhost:5555/product")
+     return this.http.get("http://localhost:5555/product/")
   }
 }

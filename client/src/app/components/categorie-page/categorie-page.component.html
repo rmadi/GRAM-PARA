@@ -24,24 +24,13 @@
             <div class="col-xl-9">
 
                 <div class="row">
-                    <div class="col-md-4 try" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
+                    <div *ngFor="let product of products; let i = index">
+                        <div class="col-md-4 try" style="margin-top: 15px;">
+                            <app-item-card [productTitle]="product.title" [Productprice] = "product.price" [productImage] = "product.imageUrl" ></app-item-card>
+                        </div>
                     </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
+               
+
                 </div>
             </div>
 </div>
