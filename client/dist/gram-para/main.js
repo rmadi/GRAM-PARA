@@ -312,12 +312,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 
 class RegisterComponent {
-    constructor() { }
+    constructor() {
+        this.firstName = '';
+        this.lastName = '';
+        this.email = '';
+        this.password = '';
+        this.rpassword = '';
+        this.phoneNumber = null;
+        this.city = '';
+        this.address1 = '';
+        this.address2 = '';
+        this.zipCode = null;
+        this.role = '';
+    }
     ngOnInit() {
+    }
+    getFirst(event) {
+        this.firstName += event.target.value;
+        console.log(this.firstName);
     }
 }
 RegisterComponent.ɵfac = function RegisterComponent_Factory(t) { return new (t || RegisterComponent)(); };
-RegisterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RegisterComponent, selectors: [["app-register"]], decls: 34, vars: 0, consts: [[1, "container", "register-form"], [1, "form"], [1, "note"], [1, "form-content"], [1, "row"], [1, "col-md-4"], [1, "form-group"], ["type", "text", "placeholder", "Your First Name *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Your Last Name *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Email*", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Role  Admin or client *", "value", "", 1, "form-control"], ["type", "password", "placeholder", "Password *", "value", "", 1, "form-control"], ["type", "password", "placeholder", "Repeat your password *", "value", "", 1, "form-control"], ["type", "number", "placeholder", "Phone Number *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Zip code *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "City *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Adress 1 *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Adress 2 *", "value", "", 1, "form-control"], ["type", "button", 1, "btnSubmit"]], template: function RegisterComponent_Template(rf, ctx) { if (rf & 1) {
+RegisterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RegisterComponent, selectors: [["app-register"]], decls: 34, vars: 0, consts: [[1, "container", "register-form"], [1, "form"], [1, "note"], [1, "form-content"], [1, "row"], [1, "col-md-4"], [1, "form-group"], ["type", "text", "placeholder", "Your First Name *", 1, "form-control", 3, "keyup"], ["type", "text", "placeholder", "Your Last Name *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Email*", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Role  Admin or client *", "value", "", 1, "form-control"], ["type", "password", "placeholder", "Password *", "value", "", 1, "form-control"], ["type", "password", "placeholder", "Repeat your password *", "value", "", 1, "form-control"], ["type", "number", "placeholder", "Phone Number *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Zip code *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "City *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Adress 1 *", "value", "", 1, "form-control"], ["type", "text", "placeholder", "Adress 2 *", "value", "", 1, "form-control"], ["type", "button", 1, "btnSubmit"]], template: function RegisterComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -329,7 +345,9 @@ RegisterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "input", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "input", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function RegisterComponent_Template_input_keyup_9_listener($event) { return ctx.getFirst($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "input", 8);
