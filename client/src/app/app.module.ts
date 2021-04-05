@@ -7,7 +7,8 @@ import { CategoriePageComponent } from './components/categorie-page/categorie-pa
 import { ItemCardComponent } from './components/item-card/item-card.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
-import {ProductComponent} from './components/product/product.component'
+import {ProductComponent} from './components/product/product.component';
+import { FootbarComponent } from './components/footbar/footbar.component'
 
 
 
@@ -28,8 +29,12 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 
     NavbarComponent,
     ProductComponent,
+
     HomePageComponent,
 
+
+
+    FootbarComponent,
 
 
     
