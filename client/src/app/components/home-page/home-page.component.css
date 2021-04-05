@@ -1,7 +1,7 @@
 .card-promo {
     display:flex;
     padding-left: 360px;
-    
+    height: 70%;
     
 }
 
@@ -79,6 +79,9 @@ img {
     font-size:x-large;
 }
 
+.sponsored {
+    padding-left: 660px;
+}
 
 
 
