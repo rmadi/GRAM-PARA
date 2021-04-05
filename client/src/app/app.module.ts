@@ -10,7 +10,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {ProductComponent} from './components/product/product.component';
 import { FootbarComponent } from './components/footbar/footbar.component';
 import { RegisterComponent } from './components/register/register.component'
+import { HttpClientModule } from '@angular/common/http';
 
+
+import { HomePageComponent } from './components/home-page/home-page.component';
+
+
+
+  
 
 @NgModule({
   declarations: [
@@ -19,17 +26,25 @@ import { RegisterComponent } from './components/register/register.component'
     CategoriePageComponent,
     ItemCardComponent,
 
+
     NavbarComponent,
     ProductComponent,
+
+    HomePageComponent,
+
+
+
     FootbarComponent,
     RegisterComponent,
+
 
     
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
