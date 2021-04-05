@@ -12,9 +12,9 @@ body {
     left: 250px;
   }
   .div-btn-pos{
-    /* position: relative; */
-    /* right: -150px; */
-    float: left;
+   position: relative;
+   top: -40px; 
+     right: -150px; 
   }
   .div-price{
     position:relative; 

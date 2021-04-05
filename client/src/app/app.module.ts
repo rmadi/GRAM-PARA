@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { SinginComponent } from './components/singin/singin.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -47,6 +48,7 @@ import { SinginComponent } from './components/singin/singin.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
