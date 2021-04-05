@@ -19,8 +19,10 @@ module.exports = {
 
 
 addProduct :  (req,res) => {
-   const  product = new Product({
+    const product = new Product({
+       pricePromo: req.body.pricePromo,
        title: req.body.title,
+       name: req.body.name,
        price: req.body.price,
        imageUrl: req.body.imageUrl,
        descreption: req.body.descreption,
