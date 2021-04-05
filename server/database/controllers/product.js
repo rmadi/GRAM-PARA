@@ -25,7 +25,7 @@ addProduct :  (req,res) => {
        name: req.body.name,
        price: req.body.price,
        imageUrl: req.body.imageUrl,
-       descreption: req.body.descreption,
+       description: req.body.description,
        producer: req.body.producer
     })
      product.save(() => {

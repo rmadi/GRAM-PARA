@@ -28,16 +28,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 
     NavbarComponent,
     ProductComponent,
-
     HomePageComponent,
-
-
-
     FootbarComponent,
-
-
-    
-
   ],
   imports: [
     BrowserModule,
