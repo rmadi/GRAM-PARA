@@ -1,5 +1,5 @@
 <div class="card">
-    <form #userForm="ngForm" (ngSubmit)=onsubmit(userForm.value)>
+    <form >
        <h2 class="title"> Log in</h2>
        <p class="subtitle">Don't have an account? <a routerLink="register" routerLinkActive="active"> sign Up</a></p>
  
@@ -17,9 +17,9 @@
  
        <div class="email-login">
           <label for="email"> <b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" ngModal required>
+          <input type="text" placeholder="Enter Email" id="email" (change)='this.onSingin($event)' required>
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="pws" ngModal required>
+          <input type="password" placeholder="Enter Password" id="password" (change)='this.onSingin($event)' required>
        </div>
        <button class="cta-btn">Log In</button>
        <a class="forget-pass" href="#">Forgot password?</a>
