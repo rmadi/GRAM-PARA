@@ -7,20 +7,20 @@ import { HttpClient } from '@angular/common/http';
 export class ProductService {
   
   productData: any = []
-  addProduct: any = []
   
   constructor(private http: HttpClient) {
   }
   getproduct() {
     return this.http.get("http://localhost:5555/product")
   }
-  addproduct() {
-    return this.http.post("http://localhost:5555/product/create",{})
+  addproduct(title:string, category:string, price:string , pricePromo:string, producer: string,  imageUrl:string,  stock: string, description: string  ) {
+    return this.http.post("http://localhost:5555/product/create",{title, category, price, pricePromo,  producer, imageUrl, stock, description})
   }
 }
+
+
 // export interface ProductData{
 //   name: string,
 //   description: string,
-
 //   id:number,
 // }

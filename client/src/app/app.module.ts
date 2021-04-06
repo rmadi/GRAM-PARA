@@ -12,7 +12,7 @@ import { FootbarComponent } from './components/footbar/footbar.component';
 import { RegisterComponent } from './components/register/register.component'
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import { AdminComponent } from './components/admin/admin.component';
+import { addProductComponent } from './components/addProduct/addProduct.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
 
@@ -33,7 +33,7 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     HomePageComponent,
     FootbarComponent,
-    AdminComponent,
+    addProductComponent,
     RegisterComponent,
     SinginComponent,
 

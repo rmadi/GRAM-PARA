@@ -1,20 +1,14 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-    name: {
-        type: String
-    },
     title: {
         type: String
     },
-    promo: {
+    price: {
         type: String
     },
-    price: {
-        type: Number
-    },
     pricePromo: {
-        type: Number
+        type: String
     },
     imageUrl: {
         type: String
@@ -31,7 +25,6 @@ const productSchema = new mongoose.Schema({
     stock: {
         type: Boolean
     }
-    
 })
 
 module.exports = mongoose.model('product', productSchema)
