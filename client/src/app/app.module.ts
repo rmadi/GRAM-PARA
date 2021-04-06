@@ -13,6 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminProductsComponent } from './components/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 
@@ -34,6 +38,22 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 
 
     FootbarComponent,
+
+
+
+    AdminComponent,
+
+
+
+    AdminProductsComponent,
+
+
+
+    AdminOrdersComponent,
+
+
+
+    CartComponent,
 
 
     
