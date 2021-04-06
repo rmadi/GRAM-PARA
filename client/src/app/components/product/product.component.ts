@@ -9,11 +9,7 @@ import {ProductService} from '../../services/product.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-//   @NgModule({
-//   imports: [
-//     HttpClient,
-//   ]
-// })
+
 export class ProductComponent implements OnInit {
   mydata:any=[]
 
