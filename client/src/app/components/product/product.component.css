@@ -1,32 +1,36 @@
-.clearfix:before, .clearfix:after {
-    content: " ";
-    display: table;
+ .text-danger {
+    color: red;
+    font-weight: 500;
+    font-size:300%;  
+} 
+
+
+#reduction_percent_display {
+     color: red;
+    font-weight: 500;
+    font-size:200%;  
 }
-.our_price_display {
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 32px;
-    font-family: oswald bold,"sans-serif";
-    color: #2db674;
-    display: inline-block;
-    margin-right: 20px;
+.text-grey {
+    color: green;
+    font-weight: 500;
+    font-size:200%;
 }
-#reduction_percent, #reduction_amount {
-    margin-right: 10px;
-    padding: 1px 2px;
-    font-weight: 600;
-    font-family: open sans,sans-serif;
-    font-size: 21px;
-    line-height: 23px;
-    color: #fff;
-    background: #f13340;
-    border: 1px solid #d02a2c;
+.img-fluid{
+    width:80%;
+    border: 0.01em solid black;
 }
-#old_price {
-    padding-bottom: 15px;
-    font-size: 13px;
-    text-decoration: line-through;
-    display: inline-block;
-    font-family: open sans,sans-serif;
-    line-height: 23px;
+.title{
+    font: 2em sans-serif;
+    color: green
+}
+.quantityy {
+    border: 1px solid;
+    width: 60px;
+    height: 39px;
+    padding: 0 6px;
+    float: left;
+    border: 1px solid #d6d4d4;
+    line-height: 27px;
+    text-align: center;
+
 }

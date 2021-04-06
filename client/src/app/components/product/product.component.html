@@ -1,93 +1,55 @@
-<img class="img-responsive" src="">
-<div id="image-block" class="clearfix"> 
-     
-    <span id="view_full_size"> 
-        <img id="bigpic" itemprop="image" src="https://static.beaute-test.com/prod/img99111.jpg" title="Filorga Pigment White Soin illuminateur, 50 ml" alt="Filorga Pigment White Soin illuminateur, 50 ml" width="458" height="458"> 
-        
-     </span>
-</div>
-<div class="pb-center-column col-xs-12 col-sm-5">
-    <h1 itemprop="name">Filorga Pigment White Illuminating care, 50 ml</h1>
-    <div class="content_prices clearfix"><div>
-        <p class="our_price_display" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
-            <link itemprop="availability" href="https://schema.org/InStock">
-            <span id="our_price_display" class="price" itemprop="price" content="124.68">124,680 DT</span>
-             TTC<meta itemprop="priceCurrency" content="TND"></p>
-             <p id="reduction_percent">
-                 <span id="reduction_percent_display">-20%</span>
-                </p>
-                <p id="reduction_amount" style="display:none">
-                    <span id="reduction_amount_display"></span>
-                </p>
-                <p id="old_price">
-                    <span id="old_price_display">
-                    <span class="price">155,850 DT</span> TTC</span>
-                </p>
-            </div>
-            <div class="clear">
-
-            </div>
+<section class="mb-5">
+  <p>Product details</p>
+  <div class="row" *ngFor="let product of mydata">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <div class="mdb-lightbox">
+        <div class="row product-gallery mx-1">
+          <div class="col-12 mb-0">
+            <figure class="view overlay rounded z-depth-1 main-img">
+                <img src={{product.imageUrl}}
+                  class="img-fluid z-depth-1" > 
+            </figure>                 
+          </div>     
         </div>
-        <div id="short_description_block">
-                    <div id="short_description_content" class="rte align_justify" itemprop="description">
-                        <p>Pigment-White Illuminating Care by Filorga is a multi-action illuminating care that restores skin uniformity at 360° to reveal a luminous and pure complexion.</p>
-                        <p>Capacity : 50 ml</p>
-                    </div>
-                </div>
-                    <div id="oosHook" style="display: none;">
-                        <p class="form-group"> 
-                            <input type="text" id="oos_customer_email" name="customer_email" size="20" value="your@email.com" class="mailalerts_oos_email form-control"></p> <a href="#" title="Notify me when available" id="mailalert_link" rel="nofollow">Notify me when available</a>
-                             <span id="oos_customer_email_result" style="display:none; display: block;">
-                            </span>
-                        </div>
-                        <p id="loyalty" class="align_justify">By purchasing this product you can earn up to <b>
-                            <span id="loyalty_points">124</span>
-                             Loyalty points
-                            </b>. Your basket total will be <b>
-                                <span id="total_loyalty_points">124</span> Loyalty points</b> which can be converted into a voucher <span id="loyalty_price">3,720 DT</span>.</p> <br class="clear"><ul id="usefull_link_block" class="clearfix no-print"></ul><form id="buy_block" action="https://www.pharma-shop.tn/panier" method="post"><p class="hidden"> <input type="hidden" name="token" value="c3845ad5789090fa15194862470dfd53"> 
-                                    <input type="hidden" name="id_product" value="1918" id="product_page_product_id">
-                                     <input type="hidden" name="add" value="1">
-                                      <input type="hidden" name="id_product_attribute" id="idCombination" value="">
-                                    </p>
-                                    <div class="box-info-product">
-                                        <div class="product_attributes">
-                                            <p id="minimal_quantity_wanted_p" style="display: none; color: rgb(55, 72, 83);"> 
-                                                The minimum quantity to be able to order this product is
-                                                 <b id="minimal_quantity_label">1</b>
-                                                </p>
-                                            </div>
-                                            <div class="d-i-b"><p id="quantity_wanted_p"> 
-                                                <label for="quantity_wanted">Qte</label> 
-                                                <a href="#" data-field-qty="qty" class="btn btn-default button-minus product_quantity_down">
-                                                     <span><i class="icon-minus"></i></span>
-                                                     </a> 
-                                                <input type="text" min="1" name="qty" id="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                                 <a href="#" data-field-qty="qty" class="btn btn-default button-plus product_quantity_up"><span>
-                                                         <i class="icon-plus"></i>
-                                                        </span>
-                                                     </a> 
-                                                     <span class="clearfix">
-                                                     </span>
-                                                    </p>
-                                                </div>
-                                                <div class="d-i-b">
-                                                    <p class="buttons_bottom_block no-print">
-                                                         <span class="button-container-p"> 
-                                                             <a class="wishlist-btn" href="#" onclick="WishlistCart('wishlist_block_list', 'add', '1918', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow" title="Ajouter à ma liste">
-                                                                 <i class="icon-star"></i> 
-                                                                </a> 
-                                                            </span>
-                                                            </p>
-                                                        </div>
-                                                        <!-- add to cart -->
-                                                        <div class="d-i-b">
-                                                            <p id="add_to_cart" class="buttons_bottom_block no-print">
-                                                             <button type="submit" name="Submit" class="exclusive">
-                                                                <span>Add to Cart</span>
-                                                                <i class="icon-cart-plus"></i>
-                                                            </button>
-                                                             </p>
-                                                         </div>
-                                    </div>
-                                    </form>
+      </div>
     </div>
+    <div class="col-md-6">
+      <h5 class="title">{{product.title}}</h5>
+      <p class="mb-2 text-muted text-uppercase small">{{product.name}}</p>
+      <!-- price -->
+      <h6>
+        <span class="text-danger mr-1">{{product.pricePromo}} DT TTC</span>
+        <p id="reduction_percent">
+          <p id="reduction_percent_display">-20%</p>
+        <span class="text-grey"><s>{{product.price}} DT </s></span>
+      </h6>
+      <p class="pt-1">{{product.description}}</p>
+      <hr>
+      <div class="table-responsive mb-2">
+        <table class="table table-sm table-borderless">
+          <tbody>
+            <tr>
+              <td class="pl-0 ">Quantity</td>
+            </tr>
+            <tr>
+              <td class="pl-0">
+                <div class="def-number-input number-input safari_only mb-0">
+                  <span onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                    class="btn btn-success">-</span>
+                  <input class="quantityy" min="0"  name="quantity" value="1" type="number">
+                  <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                    class="btn btn-success">+</span>
+                </div>               
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="button" class="btn btn-outline-success btn-md mr-1 mb-3">Buy now</button>
+      <button type="button" class="btn btn-outline-success btn-md mr-1 mb-3">
+        <i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+        <button type="button" class="btn btn-danger btn-md px-3 mb-3 material-tooltip-main" data-toggle="tooltip"
+        data-placement="top" title="Add to wishlist"><i class="far fa-heart"></i></button>
+    </div>
+  </div>
+</section>
