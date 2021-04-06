@@ -2,5 +2,14 @@
 client/node_modules
 .env
 server/node_modules
-package-lock.json
+
 dist
+client/package-lock.json
+server/package-lock.json
+
+
+client/dist
+server/dist
+
+
+

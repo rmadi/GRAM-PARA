@@ -1,106 +1,136 @@
 <nav class="navbar navbar-light bg-light">
-    <img src="../../logo_Tt4_4.ico" alt="">
-     <div class="nav-pos">
+  <div class="row" style="display: contents;">
 
-     <form class="form-inline">
-         <div class ="form-pos-nav">
-            <input class="form-control mr-sm-2" type="search"  placeholder="Search" aria-label="Search">
+      <div class="col-2">
+        <img
+          src="../../../assets/pictures/logo.png"
+          alt=""
+          height="50px"
+          width="100px"
+        />
+      </div>
 
-         </div>
-     </form>
-     </div>
-   </nav>
-<div class="nav-bar-list">
- <nav>
-     <input type="checkbox" id="check">
-     <label for="check" class="checkbtn">
-         <div class="div-i-pos">
-              <i class="fas fa-bars"></i>
-         </div>
+      <div class="div-search-cont col-6" style="display: contents">
+            <button type="button" class="btn btn-primary" style="background: linear-gradient(105deg, #0cc796,#0b6623, #0cc796); border-radius: 8px; position: relative; left: 515px;
+            ">
+              <i class="fas fa-search"></i>
+            </button>
+              <input
+              type="search"
+              id="form1"
+              class="form-control "
+              placeholder="Search "
+            />
+      </div>
+
+      <div class="div-btn-pos col-4">
+        <button type="button" class="btn btn-light" style="background-color: #CAD3C8; color: black;  "><a
+          style="color: black; font-size: 16px;" routerLink="singin" routerLinkActive="active"> sign in</a> </button>
+        <button type="button" class="btn btn-light" style="background-color: #CAD3C8;"><a routerLink="register" routerLinkActive="active" style="color: black; font-size: 16px;" >sign up</a> </button>
+        <button type="button" class="btn btn-outline-success btn-md mr-1 mb-3" style="background-color: #0cc796; position: relative; top: 9px; border-radius: 10px; ">
+          <i class="fas fa-shopping-cart pr-2"></i></button>
+      </div>
+
       
-     </label>
-   <ul>
-     <li class="menu-skin">
-       <a> Skin</a>
-       <ul class="submenu">
-         <li><a class="active">Rakia</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-hair">
-       <a>Hair</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-organic">
-       <a>Organic</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-mother">
-       <a>Mother's & Kids</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-body">
-       <a>Body</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-naturel">
-       <a>Organic & natural</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-hygiene">
-       <a>Hygiene</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-men">
-       <a>Men</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-medical">
-       <a>Medical material</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-   </ul>
- </nav>
+  </div> 
+</nav>
+<div class="nav-bar-list">
+  <nav id="nav-mobile">
+    <i class="fas fa-bars"></i>
+  </nav>
+  <nav id="nav-pc">
+    <ul>
+      <li class="menu-skin">
+        <a> Skin</a>
+        <ul class="submenu">
+          <li><a class="active"> Hydratants et nourissants
+          </a></li>
+          <li><a> Anti-âge et anti-rides
+          </a></li>
+          <li><a> Anti-tâches et dépigmentants
+          </a></li>
+          <li><a> Nettoyant et démaquillant
+          </a></li>
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Hair</a>
+        <ul class="submenu">
+          <li><a>Hair conditioner</a></li>
+          <li><a>Shampoo</a></li>
+          <li><a>Hair care</a></li>
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Organic</a>
+        <ul class="submenu">
+          
+          <li><a>Self-tanner</a></li>
+          <li><a>Sunscreen</a></li>
+          <li><a>After sun care</a></li>
+          <li><a>Solar pack</a></li>
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Mother's & Kids</a>
+        <ul class="submenu">
+          <li><a> Baby screen
+          </a></li>
+          <li><a> Feeding with milk</a></li>
+          <li><a>Face and body hydration</a></li>
+          <li><a>Nose-ears</a></li>
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Body</a>
+        <ul class="submenu">
+          <li><a>Hand care</a></li>
+          <li><a>Foot care</a></li>
+          <li><a>hydration and body nutrition</a></li>
+          <li><a>Body scrub and exfoliant</a></li>
+          <li><a>Heavy legs</a></li>
+          <li><a>Perfume</a></li>
+
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Organic & natural</a>
+        <ul class="submenu">
+          <li><a>Self-tanner</a></li>
+          <li><a>Sunscreen</a></li>
+          <li><a>After sun care</a></li>
+          <li><a>Solar pack</a></li>
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Hygiene</a>
+        <ul class="submenu">
+          <li><a>Toothbrushes</a></li>
+          <li><a>Toothpaste</a></li>
+          <li><a>Personal hygiene</a></li>
+          <li><a>Shower gels and liquid soaps</a></li>
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Men</a>
+        <ul class="submenu">
+          <li><a>Men Aktiv
+          </a></li>
+          <li><a>FORTE PHARMA ENERGY TIGRA</a></li>
+          
+        </ul>
+      </li>
+      <li class="menu-skin">
+        <a>Medical material</a>
+        <ul class="submenu">
+          <li><a>Blood pressure monitors
+          </a></li>
+          <li><a>Glucometers
+          </a></li>
+          <li><a>Weighs Person</a></li>
+          <li><a>Thermometers</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 </div>
