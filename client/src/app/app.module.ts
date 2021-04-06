@@ -8,11 +8,10 @@ import { ItemCardComponent } from './components/item-card/item-card.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {ProductComponent} from './components/product/product.component';
-import { FootbarComponent } from './components/footbar/footbar.component'
+import { FootbarComponent } from './components/footbar/footbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
-
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 
@@ -43,7 +42,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

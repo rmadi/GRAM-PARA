@@ -1,7 +1,7 @@
 .card-promo {
     display:flex;
     padding-left: 360px;
-    
+    height: 550px;
     
 }
 
@@ -25,11 +25,11 @@
     padding-left: 10px;
     
     background-repeat: no-repeat;
-    color: #cf201a;
+    color: #cf6c1a;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: -1px;
-    font-size:xx-large;
+    font-size:x-large;
 }
 
 .card-img-top {
@@ -59,6 +59,7 @@ img {
 .card-sold {
     display:flex;
     padding-left: 360px;
+    height : 550px;
     
     
 }
@@ -78,6 +79,25 @@ img {
     letter-spacing: -1px;
     font-size:x-large;
 }
+
+.sponsored {
+    padding-left: 660px;
+}
+
+.carousel-inner {
+    height: 85%;
+    width : 100%;
+    
+    padding-left: 150px;
+}
+
+.pub {
+    height: 85px;
+    width : 100%;
+}
+
+
+
 
 
 
