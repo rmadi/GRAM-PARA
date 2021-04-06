@@ -11,5 +11,7 @@ export class SinginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onsubmit(val:string) {
+console.log(val)
+  }
 }

@@ -1,3 +1,5 @@
+<form #registerForm="ngForm"  (ngSubmit)="getValues(registerForm.value)">
+
 <div class="container register-form">
     <div class="form">
         <div class="note">
@@ -8,16 +10,16 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your First Name *" (keyup)="getFirst($event)"/>
+                        <input type="text" class="form-control" placeholder="Your First Name *" ngModal name="firstName"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Last Name *" value=""/>
+                        <input type="text" class="form-control" placeholder="Your Last Name *" ngModal name="lastname"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email*" value=""/>
+                        <input type="text" class="form-control" placeholder="Email*" ngModal name="email"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Role  Admin or client *" value=""/>
+                        <input type="text" class="form-control" placeholder="Role  Admin or client *" ngModal name="role"/>
 
                     </div>
                    
@@ -27,27 +29,27 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password *" value=""/>
+                        <input type="password" class="form-control" placeholder="Password *" ngModal name="password"/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Repeat your password *" value=""/>
+                        <input type="password" class="form-control" placeholder="Repeat your password *" ngModal name="rpassword"/>
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Phone Number *" value=""/>
+                        <input type="number" class="form-control" placeholder="Phone Number *" ngModal name="phone"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Zip code *" value=""/>
+                        <input type="text" class="form-control" placeholder="Zip code *" ngModal name="zipcode"/>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="City *" value=""/>
+                        <input type="text" class="form-control" placeholder="City *" ngModal name="city"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Adress 1 *" value=""/>
+                        <input type="text" class="form-control" placeholder="Adress 1 *" ngModal name="adress1"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Adress 2 *" value=""/>
+                        <input type="text" class="form-control" placeholder="Adress 2 *" ngModal name="adress2"/>
                     </div>
                        
                 </div>
@@ -56,3 +58,5 @@
         </div>
     </div>
 </div>
+</form>
+

@@ -6,20 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  firstName ='';
-  lastName = '';
-  email = '';
-  password = '';
+  // firstName ='';
+  // lastName = '';
+  // email = '';
+  // password = '';
   
-  rpassword = '';
-  phoneNumber = null;
-  city = '';
-  address1 = '';
-  address2 = '';
+  // rpassword = '';
+  // phoneNumber = null;
+  // city = '';
+  // address1 = '';
+  // address2 = '';
 
-  zipCode  = null;
+  // zipCode  = null;
 
-  role = '';
+  // role = '';
 
 
 
@@ -29,8 +29,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   
   }
-getFirst(event:any) {
-  this.firstName +=event.target.value;
-  console.log(this.firstName)
+// getFirst(event:any) {
+//   this.firstName +=event.target.value;
+//   console.log(this.firstName)
+// }
+getValues(val:any) {
+  console.warn(val)
 }
 }
