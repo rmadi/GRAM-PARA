@@ -1,6 +1,6 @@
 .card-promo {
     display:flex;
-    padding-left: 360px;
+    padding-left: 130px;
     height: 550px;
     
 }
@@ -58,7 +58,7 @@ img {
 
 .card-sold {
     display:flex;
-    padding-left: 360px;
+    padding-left: 130px;
     height : 550px;
     
     
@@ -97,6 +97,12 @@ img {
 }
 
 
+
+
+.publi{
+    padding-left : 1960px ;
+    padding-top: 20px;
+}
 
 
 
