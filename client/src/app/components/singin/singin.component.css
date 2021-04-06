@@ -54,7 +54,7 @@ body {
   }
   .fb-btn {
     background: #fff;
-    border: solid 2px rgb(69, 69, 185);
+    border: solid 2px rgb(69, 185, 104);
     border-radius: 8px;
     padding: 10px;
     display: flex;
@@ -92,7 +92,7 @@ body {
   }
   
   .cta-btn {
-    background-color: rgb(69, 69, 185);
+    background-color: rgb(38, 87, 74);
     color: white;
     padding: 18px 20px;
     margin-top: 10px;
