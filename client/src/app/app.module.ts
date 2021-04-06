@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 
@@ -30,6 +31,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     ProductComponent,
     HomePageComponent,
     FootbarComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

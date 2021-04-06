@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="../../../assets/pictures/logo.png" alt="" height="50px" width="100px">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Admin Dashboard</a>
+      <a class="nav-item nav-link active" href="#">Product <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Add Product
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">        
+                    <input type="text" placeholder="title..." class="form-control"  formControlName="title" id="recipient-name">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="name..." class="form-control"  formControlName="name" id="recipient-name">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="price..." class="form-control" formControlName="price"  id="recipient-name">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="pricePromo..." class="form-control"  formControlName="pricePromo" id="recipient-name">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="promo..." class="form-control"  formControlName="promo" id="recipient-name">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="imageUrl..." class="form-control"  formControlName="imageUrl" id="recipient-name">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control"  formControlName="descreption" placeholder="descreption..."id="message-text"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click)="addproduct()" class="btn btn-primary">Add Product</button>
+        </div>
+        </div>
+    </div>
+    </div>      
+    </a>
+        </div>
+    </div>
+    </nav>
