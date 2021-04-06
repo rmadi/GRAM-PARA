@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "angularx-social-login": "^3.5.5"
+    "angularx-social-login": "^3.5.5",
+    "jsonwebtoken": "^8.5.1"
   }
 }

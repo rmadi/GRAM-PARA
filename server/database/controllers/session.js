@@ -1,13 +1,13 @@
 const Session = require('../models/index.js').session
 
 module.exports = {
-    getSession:   (req, res) => {
-        Session.find({}, (err, result) => {
+    find:   (cookie) => {
+        Session.find({"session":cookie}, (err, result) => {
             if (err) {
                 console.error(err)
                 return
          } 
-        res.send(result)
+        return result
     })
 },
 
@@ -18,14 +18,15 @@ module.exports = {
 },
 
 
-addSession :  (req,res) => {
-   const  session = new Session({
-       userId: req.body.userId,
-       session: req.body.session,
-       date: req.body.date
+addSession :  (id,session) => {
+    console.log ("ghgf")
+   var  sessionAdd = new Session({
+       userId: id,
+       session: session,
+       date: new Date(Date.now()),
     })
-     session.save(() => {
-    res.send(session)
+    sessionAdd.save(() => {
+        console.log('session saved')
 })
 },
 
@@ -54,4 +55,6 @@ addSession :  (req,res) => {
     
     }
 }
+
+
 

@@ -1,0 +1,19 @@
+<div class="card">
+    <form >
+       <h2 class="title"> Log in</h2>
+       <p class="subtitle">Don't have an account? <a routerLink="register" routerLinkActive="active"> sign Up</a></p>
+ 
+
+ 
+       <p class="or"><span>or</span></p>
+ 
+       <div class="email-login">
+          <label for="email"> <b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" (change)="this.getEmail($event)" ngModal required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pws" (change)="this.getPassword($event)" ngModal required>
+       </div>
+       <button class="cta-btn" (click)="this.onsubmit()">Log In</button>
+       <a class="forget-pass" href="#">Forgot password?</a>
+    </form>
+ </div>
