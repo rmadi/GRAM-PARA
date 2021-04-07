@@ -1,3 +1,5 @@
+
+
 <div class="container-fluid home-page" style="margin-top:20px">
   <div  class="row " style="margin-bottom:25px;">
     <div class="col-md-2 pub-delete">
@@ -27,6 +29,7 @@
     
       </div>
     </div>
+   
      
     <div class="col-md-2 pub-delete">
       <!-- <img src="https://www.elle.be/fr/wp-content/uploads/2018/10/vegan_cosmetics.gif" class="item-img " title="BON PLAN" alt="BON PLAN"  style = "height : 380px ;width : 380px "  > -->
@@ -49,9 +52,10 @@
   <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
 </a>
   <div class="card-body" style="text-align: center;">
-    <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5>
-   
-    <h3 class="card-title"> {{product.price}} DT</h3>
+    <a routerLink="product/{{product._id}}">
+    <h5 class="card-title" style="font-weight: 200;font-family: 'Kiwi Maru', serif;">{{product.title}} </h5></a>
+    <a routerLink="product/{{product._id}}">
+    <h3 class="card-title"> {{product.price}} DT</h3></a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
@@ -63,13 +67,16 @@
 
 <div *ngFor="let product of products"> 
    <div class="card card-item" style="width: 18.5rem;margin-right: 20px;">
-  
-  <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
+    <a routerLink="product/{{product._id}}">
+  <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap"></a>
 
   <div class="card-body" style="text-align: center;">
+    <a routerLink="product/{{product._id}}">
     <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5>
-   
+  </a>
+  <a routerLink="product/{{product._id}}" >
     <h3 class="card-title"> {{product.price}} DT</h3>
+  </a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
@@ -86,13 +93,14 @@
 
   <div *ngFor="let product of stocklimit">  <div class="card card-item" style="width: 18.5rem;margin-right: 20px;">
 
-    
-    <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
+    <a routerLink="product/{{product._id}}">
+    <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap"></a>
 
   <div class="card-body" style="text-align: center;">
-    <h5 class="card-title" style="font-weight: 200;">{{product.title}}</h5>
-   
-    <h3 class="card-title"> {{product.price}} DT</h3>
+    <a routerLink="product/{{product._id}}">
+    <h5 class="card-title" style="font-weight: 200;">{{product.title}}</h5></a>
+    <a routerLink="product/{{product._id}}">
+    <h3 class="card-title"> {{product.price}} DT</h3></a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
@@ -108,7 +116,7 @@
 <div class="marquee">
   <div class="marquee--inner">
     <span>
-          <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+        <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
       <a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
       <a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
       <a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
