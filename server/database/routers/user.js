@@ -13,6 +13,8 @@ router.post('/create', controllers.user.addUser);
 router.put('/:id', controllers.user.editUser);
 
 router.delete('/:id', controllers.user.deleteUserById);
+
+router.post('/signin', controllers.user.findUser)
        
 
 module.exports = router;

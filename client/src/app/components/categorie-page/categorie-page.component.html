@@ -1,23 +1,31 @@
-<div class='container' style="width: 100%;margin: auto;margin-top: 70px;">
-<div class="row">
-    <div class="col-md-2">
-        
-            </div>
-            <div class="col-md-10">
+<div class='container categories' >
+    <p style="font-size: 17px; color: #95a5a6;"> Home >> Skin >> Rakia </p>
+<div class="row" style="width: 120%;margin-top: 10px;">
+            <div >
+
                 <div class="row">
-                    <div class="col-md-4 " style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
+                    <div *ngFor="let product of Pageproducts; let i = index">
+                        <div class="col-md-4 try" style="margin-top: 15px;">
+                            <app-item-card [productTitle]="product.title" [Productprice] = "product.price" [productImage] = "product.imageUrl" [productId]  = "product._id" ></app-item-card>
+                        </div>
                     </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
-                    <div class="col-md-4" style="margin-top: 15px;">
-                        <app-item-card></app-item-card>
-                    </div>
+               
+
                 </div>
+                <nav aria-label="Page navigation example" style="margin-top: 30px;">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item active" ><a class="page-link " href="#" id='1'  (click)="pageProducts($event)">1</a></li>
+                      <div *ngFor="let page of pages; let i = index">
+                        <li class="page-item" ><a class="page-link " href="#" id={{i+2}}  (click)="pageProducts($event)">{{i+2}}</a></li>
+                      </div>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
             </div>
 </div>
 </div>
