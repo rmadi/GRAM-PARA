@@ -19,4 +19,7 @@ export class ProductService {
  editProduct(id:string,title:string,price:string,pricepromo:string,imageUrl:string,description:string,producer:string,category:string,stock:string){
   return this.http.put("http://localhost:5555/product/"+id,{title,price,pricepromo,imageUrl,description,producer,category,stock})
  }
+ getOneProduct(id:string){
+    return this.http.get("http://localhost:5555/product/"+id)
+ }
 }
