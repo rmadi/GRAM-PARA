@@ -16,11 +16,12 @@ export class ProductComponent implements OnInit {
   constructor( private prodservice: ProductService) { }
   ngOnInit(): void {
     this.getproducts()
+ 
   }
   getproducts() {
     this.prodservice.getproduct().subscribe((data) => {
-      this.mydata=data
+      this.mydata = data
+         console.log('data', this.mydata)
     })
   }
-
 }
