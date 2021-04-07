@@ -7,7 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { ProductComponent } from './components/product/product.component';
-
+import { addProductComponent } from './components/addProduct/addProduct.component';
+import { AdminProductsComponent } from './components/admin-products/admin-products.component';
 const routes: Routes = [
  
   {path: '', component:HomePageComponent},
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path: 'singin', component:SinginComponent},
   {path: 'cart', component:CartComponent},
   {path:'payment', component:PaymentPageComponent},
-  
+  {path:'addProduct', component:addProductComponent},
   // {path: '**', redirectTo:''}
 ];
 
