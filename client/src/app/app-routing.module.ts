@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+// import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SinginComponent } from './components/singin/singin.component';
 
 const routes: Routes = [
  
-  {path: 'home', component:NavbarComponent},
+  {path: '', component:HomePageComponent},
+  {path: 'home', component:HomePageComponent},
+
   {path: 'register', component:RegisterComponent},
-  {path: 'singin', component:SinginComponent}
+  {path: 'singin', component:SinginComponent},
+  {path: '**', component:HomePageComponent}
 ];
 
 @NgModule({
