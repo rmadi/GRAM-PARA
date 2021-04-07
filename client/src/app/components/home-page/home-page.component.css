@@ -116,7 +116,7 @@ strong {
     transform-origin: 0 0; */
     color:white;
     margin-top: 120px;
-    margin-left: 15%;
+    margin-left: 25%;
 }
 .sectionTitle1{
     height:400px;
@@ -181,7 +181,7 @@ strong {
   .marquee {
     height: 200px;
     width: 1400px;
-    border: 2px solid #eee;
+
     overflow: hidden;
     box-sizing: border-box;
     position: relative;
