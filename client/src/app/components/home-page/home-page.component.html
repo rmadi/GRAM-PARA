@@ -1,3 +1,5 @@
+
+
 <div class="container-fluid home-page" style="margin-top:20px">
   <div  class="row " style="margin-bottom:25px;">
     <div class="col-md-2 pub-delete">
@@ -49,9 +51,10 @@
   <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
 </a>
   <div class="card-body" style="text-align: center;">
-    <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5>
-   
-    <h3 class="card-title"> {{product.price}} DT</h3>
+    <a routerLink="product/{{product._id}}">
+    <h5 class="card-title" style="font-weight: 200;font-family: 'Kiwi Maru', serif;">{{product.title}} </h5></a>
+    <a routerLink="product/{{product._id}}">
+    <h3 class="card-title"> {{product.price}} DT</h3></a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
@@ -63,13 +66,16 @@
 
 <div *ngFor="let product of products"> 
    <div class="card card-item" style="width: 18.5rem;margin-right: 20px;">
-  
-  <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
+    <a routerLink="product/{{product._id}}">
+  <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap"></a>
 
   <div class="card-body" style="text-align: center;">
+    <a routerLink="product/{{product._id}}">
     <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5>
-   
+  </a>
+  <a routerLink="product/{{product._id}}" >
     <h3 class="card-title"> {{product.price}} DT</h3>
+  </a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
@@ -86,13 +92,14 @@
 
   <div *ngFor="let product of stocklimit">  <div class="card card-item" style="width: 18.5rem;margin-right: 20px;">
 
-    
-    <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
+    <a routerLink="product/{{product._id}}">
+    <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap"></a>
 
   <div class="card-body" style="text-align: center;">
-    <h5 class="card-title" style="font-weight: 200;">{{product.title}}</h5>
-   
-    <h3 class="card-title"> {{product.price}} DT</h3>
+    <a routerLink="product/{{product._id}}">
+    <h5 class="card-title" style="font-weight: 200;">{{product.title}}</h5></a>
+    <a routerLink="product/{{product._id}}">
+    <h3 class="card-title"> {{product.price}} DT</h3></a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
