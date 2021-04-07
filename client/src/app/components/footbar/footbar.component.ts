@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from '../../services/product.service';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-footbar',
@@ -8,19 +8,19 @@ import {ProductService} from '../../services/product.service';
 })
 export class FootbarComponent implements OnInit {
   email: string = ''
-  constructor(private subUser: ProductService) { }
+  constructor(private subUser: UserService) { }
 
   ngOnInit(): void {
   }
-  changeData(event: Event): void {
-    const { target } = event
+changeData(event: Event): void {
+  const { target } = event
 
-    if ((target as HTMLButtonElement).id == 'emaill') {
+   if((target as HTMLButtonElement).id == 'emaill'){
       this.email = (target as HTMLButtonElement).value
     }
   }
-  subscribeUser() {
-    this.subUser.subscribee(this.email).subscribe((data) => {
+   subscribeUser() {
+    this.subUser.subscribee(this.email).subscribe((data)=> {
       console.log(data)
     })
   }

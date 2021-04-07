@@ -21,6 +21,7 @@ const routes: Routes = [
   {path:'payment', component:PaymentPageComponent},
   {path:'addProduct', component:addProductComponent},
   // {path: '**', redirectTo:''}
+
 ];
 
 @NgModule({

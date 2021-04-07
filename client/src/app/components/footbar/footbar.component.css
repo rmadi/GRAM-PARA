@@ -54,8 +54,8 @@ section {
 }
 .footer {
 background: linear-gradient(105deg, #0cc796,#0b6623, #0cc796);
-padding-top: 80px;
-padding-bottom: 40px;
+padding-top: 20px;
+padding-bottom: 10px;
 }
 /*END FOOTER SOCIAL DESIGN*/
 @media only screen and (max-width:768px) { 
