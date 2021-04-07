@@ -27,7 +27,7 @@ export class AdminProductsComponent implements OnInit {
   }
 
   deleteProduct(id:string) {
-    this.prodservice.DeleteProduct(id).subscribe((result) => {
+    this.prodservice.DeleteProduct(id).subscribe((result:any) => {
       this.getproducts()
       
     })

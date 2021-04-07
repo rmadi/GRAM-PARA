@@ -2,224 +2,67 @@
   <div class="row" style="display: contents;">
 
       <div class="col-2">
+        <a href="/" >
         <img
           src="../../../assets/pictures/logo.png"
           alt=""
           height="50px"
           width="100px"
-        />
+        /></a>
       </div>
-
-      <div class="div-search-cont col-6" style="display: contents">
-            <button type="button" class="btn btn-primary" style="background: linear-gradient(105deg, #0cc796,#0b6623, #0cc796); border-radius: 8px; position: relative; left: 515px;
-            ">
-              <i class="fas fa-search"></i>
-            </button>
+      <div class="div-search-cont col-6" style="display: contents">       
               <input
               type="search"
               id="form1"
               class="form-control "
-              placeholder="Search "
-            />
+              placeholder="Search... "
+            />         
       </div>
-
+     
       <div class="div-btn-pos col-4">
         <button type="button" class="btn btn-light" style="background-color: #CAD3C8; color: black;  "><a
           style="color: black; font-size: 16px;" routerLink="singin" routerLinkActive="active"> sign in</a> </button>
         <button type="button" class="btn btn-light" style="background-color: #CAD3C8;"><a routerLink="register" routerLinkActive="active" style="color: black; font-size: 16px;" >sign up</a> </button>
         <button type="button" class="btn btn-outline-success btn-md mr-1 mb-3" style="background-color: #0cc796; position: relative; top: 9px; border-radius: 10px; ">
-          <i class="fas fa-shopping-cart pr-2"></i></button>
+          <a routerLink="payment">
+            <i class="fas fa-shopping-cart pr-2"></i> </a></button>
       </div>
 
       
   </div> 
 </nav>
-<div class="nav-bar-list">
-  <nav id="nav-mobile">
-    <i class="fas fa-bars"></i>
-  </nav>
-  <nav id="nav-pc">
-    <ul>
-      <li class="menu-skin">
-        <a> Skin</a>
-        <ul class="submenu">
-          <li><a class="active"> Hydratants et nourissants
-          </a></li>
-          <li><a> Anti-âge et anti-rides
-          </a></li>
-          <li><a> Anti-tâches et dépigmentants
-          </a></li>
-          <li><a> Nettoyant et démaquillant
-          </a></li>
-        </ul>
-      </li>
-      <li class="menu-skin">
-        <a>Hair</a>
-        <ul class="submenu">
-          <li><a>Hair conditioner</a></li>
-          <li><a>Shampoo</a></li>
-          <li><a>Hair care</a></li>
-        </ul>
-      </li>
-      <li class="menu-skin">
-        <a>Organic</a>
-        <ul class="submenu">
-          
-          <li><a>Self-tanner</a></li>
-          <li><a>Sunscreen</a></li>
-          <li><a>After sun care</a></li>
-          <li><a>Solar pack</a></li>
-        </ul>
-      </li>
-      <li class="menu-skin">
-        <a>Mother's & Kids</a>
-        <ul class="submenu">
-          <li><a> Baby screen
-          </a></li>
-          <li><a> Feeding with milk</a></li>
-          <li><a>Face and body hydration</a></li>
-          <li><a>Nose-ears</a></li>
-        </ul>
-      </li>
-      <li class="menu-skin">
-        <a>Body</a>
-        <ul class="submenu">
-          <li><a>Hand care</a></li>
-          <li><a>Foot care</a></li>
-          <li><a>hydration and body nutrition</a></li>
-          <li><a>Body scrub and exfoliant</a></li>
-          <li><a>Heavy legs</a></li>
-          <li><a>Perfume</a></li>
 
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark nav-pc">
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="color: white;"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown" >
+    <ul class="navbar-nav">
+     
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+          Skin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Hydratants et nourissants</a>
+          <a class="dropdown-item" href="#"> Anti-âge et anti-ridesn</a>
+          <a class="dropdown-item" href="#">Anti-tâches et dépigmentants</a>
+          <a class="dropdown-item" href="#">Nettoyant et démaquillant</a>
+        </div>
       </li>
-      <li class="menu-skin">
-        <a>Organic & natural</a>
-        <ul class="submenu">
-          <li><a>Self-tanner</a></li>
-          <li><a>Sunscreen</a></li>
-          <li><a>After sun care</a></li>
-          <li><a>Solar pack</a></li>
-        </ul>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+          Hair
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Hair conditioner</a>
+          <a class="dropdown-item" href="#"> Shampoo</a>
+          <a class="dropdown-item" href="#">Hair care</a>
+        </div>
       </li>
-      <li class="menu-skin">
-        <a>Hygiene</a>
-        <ul class="submenu">
-          <li><a>Toothbrushes</a></li>
-          <li><a>Toothpaste</a></li>
-          <li><a>Personal hygiene</a></li>
-          <li><a>Shower gels and liquid soaps</a></li>
-        </ul>
-      </li>
-      <li class="menu-skin">
-        <a>Men</a>
-        <ul class="submenu">
-          <li><a>Men Aktiv
-          </a></li>
-          <li><a>FORTE PHARMA ENERGY TIGRA</a></li>
-          
-        </ul>
-      </li>
-      <li class="menu-skin">
-        <a>Medical material</a>
-        <ul class="submenu">
-          <li><a>Blood pressure monitors
-          </a></li>
-          <li><a>Glucometers
-          </a></li>
-          <li><a>Weighs Person</a></li>
-          <li><a>Thermometers</a></li>
-        </ul>
-      </li>
+    
     </ul>
-  </nav>
+  </div>
+</nav>
 
- <nav id='nav-pc'>
-        
-   <ul>
-     <li class="menu-skin">
-       <a> Skin</a>
-       <ul class="submenu">
-         <li><a class="active"></a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Hair</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Organic</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Mother's & Kids</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Body</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Organic & natural</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Hygiene</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Men</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-     <li class="menu-skin">
-       <a>Medical material</a>
-       <ul class="submenu">
-         <li><a>A</a></li>
-         <li><a>B</a></li>
-         <li><a>C</a></li>
-         <li><a>D</a></li>
-       </ul>
-     </li>
-   </ul>
- </nav>
-
-
-</div>

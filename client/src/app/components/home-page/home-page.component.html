@@ -1,5 +1,5 @@
 <div class="container-fluid home-page" style="margin-top:20px">
-  <div  class="row ">
+  <div  class="row " style="margin-bottom:25px;">
     <div class="col-md-2 pub-delete">
       <!-- <img src="https://static.wixstatic.com/media/116c1c_40c90f23b19444ae89a7e78625223f24~mv2.gif" class="item-img " title="BON PLAN" alt="BON PLAN"  style = "height : 350px ;width : 400px;margin-top: -20px;" > -->
     </div>
@@ -34,7 +34,7 @@
   </div>
 
 <div class="row sectionTitle justify-content-center" >
-  <span class='title-section'>Items In Promotion</span>
+  <span class='title-section'>Promotion</span>
 </div>
 
   
@@ -43,10 +43,11 @@
   
 
 <div *ngFor="let product of products"> 
-   <div class="card card-item" style="width: 18.5rem;margin-right: 20px;">
   
+   <div class="card card-item"  style="width: 18.5rem;margin-right: 20px;">
+  <a routerLink="product/{{product._id}}">
   <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
-
+</a>
   <div class="card-body" style="text-align: center;">
     <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5>
    
@@ -76,7 +77,7 @@
 
 </div>
 <div class="row justify-content-center sectionTitle1">
-    <span class='title-section'>Most Solded Items</span>
+    <span class='title-section'>Most Solded</span>
 </div>
 <div class="row justify-content-center" style='margin-bottom: 25px;'>
  
@@ -107,17 +108,17 @@
 <div class="marquee">
   <div class="marquee--inner">
     <span>
-          <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-      <a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-      <a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-      <a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
+          <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
       
     </span>
     <span>
-         <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-      <a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-      <a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-      <a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
+         <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
       
     </span>
 

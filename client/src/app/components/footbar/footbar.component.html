@@ -10,10 +10,10 @@
                 <div class="single_footer">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="#">Phone:  +216 71202121</a></li>
-                        <li><a href="#">Mobile:  +216  20202121   </a></li>
-                        <li><a href="#">Email:  gramp-para@gmail.tn </a></li>
-                        <li><a href="#">Address:  RBK, Bloc B31, Elgazala Technopark, Raoued, Gouvernorat de l’Ariana, 2088 Ariana – Tunisie.
+                        <li><a >Phone:  +216 71202121</a></li>
+                        <li><a >Mobile:  +216  20202121   </a></li>
+                        <li><a >Email:  gramp-para@gmail.tn </a></li>
+                        <li><a >Address:  RBK, Bloc B31, Elgazala Technopark, Raoued, Gouvernorat de l’Ariana, 2088 Ariana – Tunisie.
 
                         </a></li>
                     </ul>
@@ -23,10 +23,10 @@
                 <div class="single_footer single_footer_address">
                     <h4>feature</h4>
                     <ul>
-                        <li><a href="#">feature</a></li>
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">Terms of use </a></li>
-                        <li><a href="#">Standard dummy text</a></li>
+                        <li>feature</li>
+                        <li><a>Delivery</a></li>
+                        <li><a >Terms of use </a></li>
+                        <li><a>Standard dummy text</a></li>
                     </ul>
                 </div>
             </div><!--- END COL -->
@@ -35,8 +35,8 @@
                     <h4>Subscribe today</h4>
                     <div class="signup_form">                           
                         <form action="#" class="subscribe">
-                            <input type="text" class="subscribe__input" placeholder="Enter Email Address">
-                            <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                            <input type="text" class="subscribe__input" placeholder="Enter Email Address" id="emaill" (change)="this.changeData($event)">
+                            <button type="button" class="subscribe__btn" (click)="this.subscribeUser()"><i class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
                 </div>

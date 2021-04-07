@@ -68,10 +68,19 @@ body {
   nav a {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: black;
     cursor: grab;
   }
   
+  .dropdown-menu a:hover {
+
+    border-bottom: 0.5px solid #0b6623;
+    background-color: white;
+    color: #0b6623;
+    font-weight: 500;
+    font-size: 16px;
+ 
+  }
   nav li:hover .submenu {
     display: inline-block;
     position: absolute;
@@ -132,9 +141,9 @@ body {
         background-color: seagreen;
         transition: .5s;
     } */
-    #nav-pc {
+    .nav-pc {
       background: linear-gradient(105deg, #0cc796,#0b6623, #0cc796);
-  
+      font-size: 20px;
     }
     .nav-bar{
       width:400px;
