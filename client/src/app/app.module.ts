@@ -20,7 +20,7 @@ import { PaymentPageComponent } from './components/payment-page/payment-page.com
 import { addProductComponent } from './components/addProduct/addProduct.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
-import { ProfilePageComponent } from './components/profile-page/profile-page.component';
+import { SettingComponent } from './components/setting/setting.component';
 
 
 
@@ -53,7 +53,7 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
     addProductComponent,
     RegisterComponent,
     SinginComponent,
-    ProfilePageComponent,
+    SettingComponent,
 
   ],
   imports: [

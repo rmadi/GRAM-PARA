@@ -35,8 +35,8 @@
                     <h4>Subscribe today</h4>
                     <div class="signup_form">                           
                         <form action="#" class="subscribe">
-                            <input type="text" class="subscribe__input" placeholder="Enter Email Address">
-                            <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                            <input type="text" class="subscribe__input" placeholder="Enter Email Address" id="emaill" (change)="this.changeData($event)">
+                            <button type="button" class="subscribe__btn" (click)="this.subscribeUser()"><i class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
                 </div>
