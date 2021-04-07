@@ -25,14 +25,14 @@ export class CategoriePageComponent implements OnInit {
     if (target){
 
     var pageNum = Number((target as HTMLButtonElement).id)-1
-    this.Pageproducts = this.products.slice(pageNum*9,pageNum*9+9)
+    this.Pageproducts = this.products.slice(pageNum*8,pageNum*8+8)
     }
   }
   getproducts() {
     this.prodservice.getproduct().subscribe((data) => {
       this.products=data
-      this.Pageproducts = this.products.slice(0,9)
-      this.pages = Array(Math.round(this.products.length/9)-1)
+      this.Pageproducts = this.products.slice(0,8)
+      this.pages = Array(Math.round(this.products.length/8)-1)
     })
   }
 

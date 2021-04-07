@@ -29,25 +29,49 @@
         2 - Payment Method
     </div>
     <div style="margin-left: 30px;font-size: 18px;margin-top: 20px;">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="bitcoin" value="option1" >
-            <label class="form-check-label" for="bitcoin">
-              Bitcoin
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="cash" value="option2">
-            <label class="form-check-label" for="cash">
-              Cash at Delivery
-            </label>
-          </div>
+            <form name = 'radiocheck'>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="PaymentMethod" id='bitcoin' value="bitcoin" checked>
+                    <label class="form-check-label" for="bitcoin">
+                      Bitcoin
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="PaymentMethod" id="cash" value="cash">
+                    <label class="form-check-label" for="cash">
+                      Cash on Delivery
+                    </label>
+                  </div>
+                </form>
+    </div>
+    <div class="row" style="margin-top: 15px;margin-left: 50px;">
+        Please Don't Close This Page Until Payment Is Done
+    </div>
+    <div class="row" style="margin-top: 15px;margin-left: 50px;">
+        <div class="col-md-3">
+            <img src= {{QrCodeLink}} height="200px" width="200px">
+        </div>
+        <div class="col-md-3 " style="margin-left: 25px;">
+            <div class="row" style="margin-top: 15px;">
+                Status :  <p style="color:#d63031 ;">UNPAID</p>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                address : {{address}}
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                amount in TND :<br> {{total}} DT
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                amount in Bitcoin : 0.000005 BTC
+            </div>
+        </div>
     </div>
 </div>
 <div class="container" style="margin-bottom: 50px;">
     <div class="row justify-content-end">
         <div class="col-2">
                 <div>
-                    <button type="button" class="btn btn-primary" style="margin-top:10px">Complete</button>
+                    <button type="button" class="btn btn-primary" disabled style="margin-top:10px">Complete</button>
                 </div>
         </div>
     </div>
