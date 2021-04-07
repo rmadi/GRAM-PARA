@@ -6,6 +6,7 @@ import {authentication} from '../../services/authentication.service'
   styleUrls: ['./singin.component.css']
 })
 export class SinginComponent implements OnInit {
+
 email : string = ""
 password : string = ""
   constructor(private authservice: authentication) { }
@@ -25,4 +26,9 @@ password : string = ""
       console.log(data)
     })
   }
+
+ 
+
+
+  
 }
