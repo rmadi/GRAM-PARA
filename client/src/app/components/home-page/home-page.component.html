@@ -1,116 +1,131 @@
-
-<div id="carouselExampleIndicators" class="carousel-slide" data-ride="carousel" style="width: 69.5%;margin: auto;">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="https://lr-easyship.com/images/product.jpg"  alt="First slide" style="height : 450px; ">
-      </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://cabinet-st-georges.com/wp-content/uploads/2020/04/11452253.jpg" alt="Second slide" style="height : 450px;">
+<div class="container-fluid home-page" style="margin-top:20px">
+  <div  class="row " style="margin-bottom:25px;">
+    <div class="col-md-2 pub-delete">
+      <!-- <img src="https://static.wixstatic.com/media/116c1c_40c90f23b19444ae89a7e78625223f24~mv2.gif" class="item-img " title="BON PLAN" alt="BON PLAN"  style = "height : 350px ;width : 400px;margin-top: -20px;" > -->
     </div>
+    <div  class=" col-lg-8 col-md-12 col-xs-12 col-s-12">
+      <div id="carouselExampleIndicators" class="carousel-slide" data-ride="carousel" style="margin: auto;">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100 caros-img" src="https://lr-easyship.com/images/product.jpg"  alt="First slide" style="height : 550px; ">
+          </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 caros-img" src="https://cabinet-st-georges.com/wp-content/uploads/2020/04/11452253.jpg" alt="Second slide" style="height : 550px;">
+        </div>
+        
+       
+          <div class="carousel-item">
+            <img class="d-block w-100 caros-img" src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.6435-9/78383560_2455324074795066_3825152621765722112_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=973b4a&_nc_ohc=2RDCDEP7ZZsAX-4c9xw&_nc_ht=scontent.ftun4-1.fna&oh=13c716acfe749b9dd766506c69059139&oe=608DA2CC" alt="fourth slide" style="height : 550px;">
+          </div>
+         
+        </div>
     
-   
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://scontent.ftun4-1.fna.fbcdn.net/v/t1.6435-9/78383560_2455324074795066_3825152621765722112_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=973b4a&_nc_ohc=2RDCDEP7ZZsAX-4c9xw&_nc_ht=scontent.ftun4-1.fna&oh=13c716acfe749b9dd766506c69059139&oe=608DA2CC" alt="fourth slide" style="height : 450px;">
       </div>
-     
     </div>
-
+     
+    <div class="col-md-2 pub-delete">
+      <!-- <img src="https://www.elle.be/fr/wp-content/uploads/2018/10/vegan_cosmetics.gif" class="item-img " title="BON PLAN" alt="BON PLAN"  style = "height : 380px ;width : 380px "  > -->
+    </div>
   </div>
-  <div class="pub">
-  <img src="https://media0.giphy.com/media/Rf4pI2wxASQHIJvM2Y/200w.gif?cid=82a1493b1v5sd9h00htro29yrkm4mayy5fr109qx8mo01uqn&rid=200w.gif" class="item-img " title="BON PLAN" alt="BON PLAN"  style = "height : 400px ;width : 400px" >
-</div>
-<div class=" publi">
-  <img src="https://www.elle.be/fr/wp-content/uploads/2018/10/vegan_cosmetics.gif" class="item-img " title="BON PLAN" alt="BON PLAN"  style = "height : 340px ;width : 340px "  >
+
+<div class="row sectionTitle justify-content-center" >
+  <span class='title-section'>Promotion</span>
 </div>
 
-  <strong>Promotional Items </strong>
-  <br>
+  
+<div class="row justify-content-center" style='margin-bottom: 25px;'>
 
-<br>
-<br>
-  <div class="card-promo" >
+  
 
-<div *ngFor="let product of products">  <div class="card card-item" style="width: 20.5rem;">
-  <a class="new-box new-box-infos new-box-infos-En-Promotion" routerLink="/product"> <span class="new-label"><a href=""></a> En Promotion</span> </a>
+<div *ngFor="let product of products"> 
+  
+   <div class="card card-item"  style="width: 18.5rem;margin-right: 20px;">
   <a routerLink="product/{{product._id}}">
   <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
 </a>
-
   <div class="card-body" style="text-align: center;">
-    <h5 class="card-title" style="font-weight: 200;"><a routerLink="product">{{product.title}}</a> </h5>
-   
-    <h3 class="card-title"><a routerLink="product"> {{product.price}} DT </a></h3>
+    <a routerLink="product/{{product._id}}">
+    <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5></a>
+    <a routerLink="product/{{product._id}}">
+    <h3 class="card-title"> {{product.price}} DT</h3></a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
 </div></div>
 
-  
- 
-  
-
-
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<strong> The Most Sold Items </strong>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="card-sold" >
+<div class="row justify-content-center secondRaw" style='margin-bottom: 25px;'>
 
-  <div *ngFor="let product of products">  <div class="card card-item" style="width: 20.5rem;">
-    <div class="icon-sold-face icon-sold-front"><span class="lbl">Stock</span> <span class="big2">Limited</span> </div>
-    
-    <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
+
+<div *ngFor="let product of products"> 
+   <div class="card card-item" style="width: 18.5rem;margin-right: 20px;">
+    <a routerLink="product/{{product._id}}">
+  <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap"></a>
 
   <div class="card-body" style="text-align: center;">
-    <h5 class="card-title" style="font-weight: 200;">{{product.title}}</h5>
-   
+    <a routerLink="product/{{product._id}}">
+    <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5>
+  </a>
+  <a routerLink="product/{{product._id}}" >
     <h3 class="card-title"> {{product.price}} DT</h3>
+  </a>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
 </div></div>
-  
+
+</div>
+<div class="row justify-content-center sectionTitle1">
+    <span class='title-section'>Most Solded</span>
+</div>
+<div class="row justify-content-center" style='margin-bottom: 25px;'>
+ 
+
+
+
+  <div *ngFor="let product of stocklimit">  <div class="card card-item" style="width: 18.5rem;margin-right: 20px;">
+
+    <a routerLink="product/{{product._id}}">
+    <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap"></a>
+
+  <div class="card-body" style="text-align: center;">
+    <a routerLink="product/{{product._id}}">
+    <h5 class="card-title" style="font-weight: 200;">{{product.title}}</h5></a>
+    <a routerLink="product/{{product._id}}">
+    <h3 class="card-title"> {{product.price}} DT</h3></a>
+    <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
+      <i class="fas fa-shopping-cart pr-2"></i></a>
+  </div>
+</div></div>
+
 
  
 
 
 
-
-
-
-
-
-
-</div>
-<br> 
-<br>
-<br>
-<br>
-<br>
-<div class="sponsored">
-
-<a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-<a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-<a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-<a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
-<a href="https://www.amenbank.com.tn/" target = "_blank"><img src="https://www.tunisienumerique.com/wp-content/uploads/2017/08/20170209171840_IM__news1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="179" height="103" ></a>
 </div>
 
+<div class="marquee">
+  <div class="marquee--inner">
+    <span>
+          <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      
+    </span>
+    <span>
+         <a href="https://www.inntelhotelsrotterdamcentre.nl/" target = "_blank"><img src="https://hotelintel.co/content/images/2020/10/hotelintel-square-logo-1.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.rbktunisia.com/" target = "_blank"><img src="https://pbs.twimg.com/profile_images/713016293813850115/kqj7PgaK_400x400.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://www.sephora.fr/" target = "_blank"><img src="https://www.centre-commercial.fr/grand-vitrolles/wp-content/uploads/2014/02/Sephora-logo-cc-242x182.jpg"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      <a href="https://fr.filorga.com/" target = "_blank"><img src="https://www.groupehld.com/wp-content/uploads/2019/03/logos-HLD-participations-2019-darkgrey-filorga.png"  alt="Inntel Hotels.jpg" title="Inntel Hotels.jpg" width="200" height="145" ></a>
+      
+    </span>
 
-
-
-
-
+  </div>
+</div>

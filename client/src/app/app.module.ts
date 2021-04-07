@@ -20,7 +20,7 @@ import { PaymentPageComponent } from './components/payment-page/payment-page.com
 import { addProductComponent } from './components/addProduct/addProduct.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
-import { ProfilePageComponent } from './components/profile-page/profile-page.component';
+import {ProfilePageComponent} from './components/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
