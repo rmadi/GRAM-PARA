@@ -1,8 +1,8 @@
-<form #registerForm="ngForm"  (ngSubmit)="getValues(registerForm.value)">
+<form  >
 
 <div class="container register-form">
     <div class="form">
-        <div class="note">
+        <div class="note" style="background-color: rgb(134, 14, 14);">
             <p> Register please </p>
         </div>
 
@@ -10,16 +10,16 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your First Name *" ngModal name="firstName"/>
+                        <input type="text" class="form-control" placeholder="Your First Name *" id='firstName' (change)='this.changeData($event)'  />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Last Name *" ngModal name="lastname"/>
+                        <input type="text" class="form-control" placeholder="Your Last Name *" id='lastName' (change)='this.changeData($event)'/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email*" ngModal name="email"/>
+                        <input type="text" class="form-control" placeholder="Email*" id='email' (change)='this.changeData($event)' />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Role  Admin or client *" ngModal name="role"/>
+                        <input type="text" class="form-control" placeholder="Role  Admin or client *" id='role' (change)='this.changeData($event)' />
 
                     </div>
                    
@@ -29,32 +29,32 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password *" ngModal name="password"/>
+                        <input type="password" class="form-control" placeholder="Password *"id='password' (change)='this.changeData($event)'/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Repeat your password *" ngModal name="rpassword"/>
+                        <input type="password" class="form-control" placeholder="Repeat your password *"  id='rpassword' (change)='this.changeData($event)'/>
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Phone Number *" ngModal name="phone"/>
+                        <input type="text" class="form-control" placeholder="Phone Number *"  id='phone' (change)='this.changeData($event)'/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Zip code *" ngModal name="zipcode"/>
+                        <input type="text" class="form-control" placeholder="Zip code *" id='zipCode' (change)='this.changeData($event)' />
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="City *" ngModal name="city"/>
+                        <input type="text" class="form-control" placeholder="City *" id='city' (change)='this.changeData($event)'/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Adress 1 *" ngModal name="adress1"/>
+                        <input type="text" class="form-control" placeholder="Adress 1 *" id='adress1' (change)='this.changeData($event)' />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Adress 2 *" ngModal name="adress2"/>
+                        <input type="text" class="form-control" placeholder="Adress 2 *"  id='adress2' (change)='this.changeData($event)'/>
                     </div>
                        
                 </div>
             </div>
-            <button type="button" class="btnSubmit">Submit</button>
+            <button type="button" class="btnSubmit" (click)="postFrom()" >submit</button>
         </div>
     </div>
 </div>
