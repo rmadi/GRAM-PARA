@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/ht';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class ProductService {
   }
   getproduct() {
 
-     return this.http.get("http://localhost:5555/product/")
+     return this.http.get("http://localhost:5555/product")
 
   }
   addproduct(title:string, category:string, price:string , pricePromo:string, producer: string,  imageUrl:string,  stock: string, description: string  ) {

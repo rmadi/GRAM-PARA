@@ -48,7 +48,7 @@ export class addProductComponent implements OnInit {
     }
   }
   addproducts() {
-    this.prodservice.addproduct(this.title, this.category,  this.price, this.pricePromo, this.producer, this.imageUrl,  this.stock, this.description).subscribe((data)=> {
+    this.prodservice.addproduct(this.title, this.category,  this.price, this.pricePromo, this.producer, this.imageUrl,  this.stock, this.description).subscribe((data:any)=> {
       console.log(data)
     })
   }
