@@ -36,12 +36,14 @@ module.exports = {
 },
 
  editProduct :  (req,res) => {
+     console.log(req.body)
      Product.updateOne({ '_id': req.params.id }, req.body, (err, result) => {
          if (err) {
              res.status(400).send('id dont exist')
              return
          }
-         res.status(200).send('message updated')
+         res.status(200).send()
+         return
      })
         
     

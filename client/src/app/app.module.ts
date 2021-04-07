@@ -12,6 +12,11 @@ import { FootbarComponent } from './components/footbar/footbar.component';
 import { RegisterComponent } from './components/register/register.component'
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminProductsComponent } from './components/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { CartComponent } from './components/cart/cart.component';
+import { PaymentPageComponent } from './components/payment-page/payment-page.component';
 import { addProductComponent } from './components/addProduct/addProduct.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
@@ -33,6 +38,17 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     HomePageComponent,
     FootbarComponent,
+
+
+
+    AdminComponent,
+
+
+
+    AdminProductsComponent,
+    AdminOrdersComponent,
+    CartComponent,
+    PaymentPageComponent,
     addProductComponent,
     RegisterComponent,
     SinginComponent,
