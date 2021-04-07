@@ -1,5 +1,5 @@
 const User = require('../models/index.js').user
-
+const auth = require('../lib/auth')
 
 module.exports = {
     getUser:   (req, res) => {
@@ -55,6 +55,38 @@ addUser :  (req,res) => {
          }
          res.status(200).send({"message":"User deleted successfully"})
      })
-             }
-}
+             },
 
+findUser :  (req, res) => {
+
+                    console.log(req.body.email.toString())
+                     User.find({'email':req.body.email.toString()},(err,result)=>{
+                        if(err){
+                            console.log(err)
+                            res.status(500).send('error')
+                            return
+                        }
+
+    
+                      if(result.length >0 && result[0].password == req.body.password){
+
+                         var session = auth.RandomString(32)
+
+                        auth.CreateSession(req,res,result[0]._id,session)
+
+                      }else{
+                        res.send("password wrong");
+                      }
+                      
+                   })
+                   
+                  
+              
+                  
+           }
+            }
+
+
+
+
+   
