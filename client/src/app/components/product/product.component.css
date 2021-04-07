@@ -3,12 +3,10 @@
     font-weight: 500;
     font-size:300%;  
 } 
-
-
 #reduction_percent_display {
      color: red;
     font-weight: 500;
-    font-size:200%;  
+    font-size:300%;  
 }
 .text-grey {
     color: green;
@@ -32,5 +30,4 @@
     border: 1px solid #d6d4d4;
     line-height: 27px;
     text-align: center;
-
 }

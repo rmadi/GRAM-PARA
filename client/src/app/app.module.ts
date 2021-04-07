@@ -7,32 +7,44 @@ import { CategoriePageComponent } from './components/categorie-page/categorie-pa
 import { ItemCardComponent } from './components/item-card/item-card.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ProductComponent } from './components/product/product.component';
+import {ProductComponent} from './components/product/product.component';
 import { FootbarComponent } from './components/footbar/footbar.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './components/register/register.component'
 import { HttpClientModule } from '@angular/common/http';
-
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { addProductComponent } from './components/addProduct/addProduct.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { UserService } from './services/user.service';
 
+
+
+
+  
 
 @NgModule({
   declarations: [
     AppComponent,
+
     CategoriePageComponent,
     ItemCardComponent,
+
+
     NavbarComponent,
     ProductComponent,
     HomePageComponent,
     FootbarComponent,
+    addProductComponent,
     RegisterComponent,
     SinginComponent,
+
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
-  providers: [UserService],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

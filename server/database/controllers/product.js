@@ -18,15 +18,17 @@ module.exports = {
 },
 
 
-addProduct :  (req,res) => {
+    addProduct: (req, res) => {
+    console.log(req.body)
     const product = new Product({
        pricePromo: req.body.pricePromo,
        title: req.body.title,
-       name: req.body.name,
-       price: req.body.price,
+        price: req.body.price, 
        imageUrl: req.body.imageUrl,
-       descreption: req.body.descreption,
-       producer: req.body.producer
+       description: req.body.description,
+        producer: req.body.producer,
+        stock: req.body.stock,
+       category: req.body.category
     })
      product.save(() => {
     res.send(product)
