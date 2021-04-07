@@ -11,5 +11,7 @@ export class SettingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  changeData(event: Event) {
+    
+  }
 }

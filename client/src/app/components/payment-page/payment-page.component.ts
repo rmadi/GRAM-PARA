@@ -45,7 +45,7 @@ export class PaymentPageComponent implements OnInit {
   }
 
   checkPayment(){
-      this.paymentservice.checkBtcPayment(this.address).subscribe((result)=>{
+      this.paymentservice.checkBtcPayment(this.address).subscribe((result:any)=>{
         if(Number(result) > 0){
             this.paidBtc = true
         }
