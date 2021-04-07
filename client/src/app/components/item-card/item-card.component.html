@@ -1,10 +1,14 @@
 
 
-<div class="card card-item" style="width: 18rem;">
-    <img class="card-img-top" src="https://www.pharma-shop.tn/7873-thickbox_default/ducray-ictyane-creme-riche-nutri-peaux-seches-40ml.jpg" alt="Card image cap">
+<div class="card card-item" style="width: 18rem;margin-right: 10px;height: auto;">
+    <img class="card-img-top" src={{productImage}} alt="Card image cap" height="210px" >
     <div class="card-body" style="text-align: center;">
-      <h5 class="card-title" style="font-weight: 200;">ICTYANE Crème </h5>
-      <h4 class="card-title"> 150.99 DT</h4>
-      <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart</a>
+      <h5 class="card-title" style="font-weight: 100;">{{productTitle}} </h5>
+      <h4 class="card-title" > {{Productprice}} DT </h4>
+      <div  *ngIf ="this.inCart; then alreadyAdded else addtoCart"></div>
+       
+      
     </div>
   </div>
+  <ng-template #alreadyAdded><button  class="btn btn-info" style="font-weight: 200;color: white;width: 80%;" type="button" (click) = 'this.AddToCart()'>In Cart <i class="fas fa-check"></i></button></ng-template>
+  <ng-template #addtoCart>  <button  class="btn btn-success" style="font-weight: 200;color: white;width: 80%;" type="button" (click) = 'this.AddToCart()'>Add To Cart <i class="fa fa-cart-plus"></i></button></ng-template>

@@ -18,13 +18,17 @@ module.exports = {
 },
 
 
-addProduct :  (req,res) => {
-   const  product = new Product({
+    addProduct: (req, res) => {
+    console.log(req.body)
+    const product = new Product({
+       pricePromo: req.body.pricePromo,
        title: req.body.title,
-       price: req.body.price,
+        price: req.body.price, 
        imageUrl: req.body.imageUrl,
-       descreption: req.body.descreption,
-       producer: req.body.producer
+       description: req.body.description,
+        producer: req.body.producer,
+        stock: req.body.stock,
+       category: req.body.category
     })
      product.save(() => {
     res.send(product)
@@ -32,12 +36,14 @@ addProduct :  (req,res) => {
 },
 
  editProduct :  (req,res) => {
+     console.log(req.body)
      Product.updateOne({ '_id': req.params.id }, req.body, (err, result) => {
          if (err) {
              res.status(400).send('id dont exist')
              return
          }
-         res.status(200).send('message updated')
+         res.status(200).send()
+         return
      })
         
     

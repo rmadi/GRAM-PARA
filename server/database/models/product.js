@@ -5,10 +5,10 @@ const productSchema = new mongoose.Schema({
         type: String
     },
     price: {
-        type: Number
+        type: String
     },
     pricePromo: {
-        type: Number
+        type: String
     },
     imageUrl: {
         type: String
@@ -25,7 +25,6 @@ const productSchema = new mongoose.Schema({
     stock: {
         type: Boolean
     }
-    
 })
 
 module.exports = mongoose.model('product', productSchema)

@@ -1,0 +1,120 @@
+.card-promo {
+    display:flex;
+    padding-left: 130px;
+    height: 550px;
+    
+}
+
+.card-item:hover{
+    cursor: pointer;
+    
+    
+}
+
+
+
+.thumbnail-item{
+    margin: auto;
+}
+.icon-promo-face {
+    position: absolute;
+    width: 160px;
+    height: 70px;
+    backface-visibility: hidden;
+    padding-top: 10px;
+    padding-left: 10px;
+    
+    background-repeat: no-repeat;
+    color: #cf6c1a;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -1px;
+    font-size:x-large;
+}
+
+.card-img-top {
+ width : 120%;
+ height : 70%;
+ padding-left: 60px;
+}
+
+
+
+strong {
+    font-weight: bold;
+    color :#af5e5b;
+    box-sizing: border-box;
+    padding-left: 980px;
+    font-size: xx-large;
+    
+    
+}
+img {
+    vertical-align: middle;
+    width : 200px ; 
+    height :200px;
+    
+}
+
+.card-sold {
+    display:flex;
+    padding-left: 130px;
+    height : 550px;
+    
+    
+}
+
+.icon-sold-face {
+    position: absolute;
+    width: 8px;
+    height: 70px;
+    backface-visibility: hidden;
+    padding-top: 10px;
+    padding-left: 10px;
+    
+    background-repeat: no-repeat;
+    color: #d47a14;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -1px;
+    font-size:x-large;
+}
+
+.sponsored {
+    padding-left: 660px;
+}
+
+.carousel-inner {
+    height: 85%;
+    width : 100%;
+    
+    padding-left: 150px;
+}
+
+.pub {
+    height: 85px;
+    width : 100%;
+}
+
+
+
+
+.publi{
+    padding-left : 1960px ;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
