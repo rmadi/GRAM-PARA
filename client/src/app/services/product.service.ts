@@ -10,8 +10,7 @@ export class ProductService {
   
   constructor(private http: HttpClient) {
   }
-  getproduct() {
-
+  getproduct() {                                                                                                                                                                                                                                                                                       
      return this.http.get("http://localhost:5555/product")
 
   }
