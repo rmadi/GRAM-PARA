@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/../client/dist/gram-para'));
 app.use('/product', routes.product);
 app.use('/user', routes.user);
 app.use('/session', routes.session);
+app.use('/ordres', routes.ordres);
 
 app.listen(port, () => {
     console.log(`app listening at http://localhost:${port}`)

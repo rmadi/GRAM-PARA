@@ -1,0 +1,95 @@
+<div class="container" style="border: 0.1px solid #b2bec3;margin-top: 50px;">
+    <div class="row product" style="border-bottom: 0.5px solid #b2bec3;padding: 15px;font-size: 17px;font-weight: 200;">
+        <div class="col-md-3" >
+             Image
+        </div>
+        <div class="col-md-3" style="margin:auto">
+            Product title
+        </div>
+        <div class="col-md-2" style="margin:auto" >
+            categorie
+        </div>
+        <div class="col-md-2" style="margin:auto" >
+            Edit
+        </div>
+        <div class="col-md-2" style="margin:auto" >
+            Delete
+        </div>
+
+    </div>
+    <div *ngFor="let product of products;">
+        <div class="row product" style="border-bottom: 0.5px solid #b2bec3;padding: 15px;font-size: 17px;font-weight: 200;">
+            <div class="col-md-3">
+                <img src={{product.imageUrl}} height="120px" width="100px" />
+            </div>
+            <div class="col-md-3" style="margin:auto">
+                <p>{{product.title}}</p>
+            </div>
+            <div class="col-md-2" style="margin:auto" >
+                <p>skin</p>
+            </div>
+            <div class="col-md-2" style="margin:auto" >
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#editmodal" (click)="EditSelected(product._id,product.title,product.price,product.pricePromo,product.imageUrl,product.description,product.producer,product.category,product.stock)" >Edit</button>
+            </div>
+            <div class="col-md-2" style="margin:auto" >
+                <button type="button" class="btn btn-danger" (click)="deleteProduct(product._id)" >Delete</button>
+            </div>
+    
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+            <button type="button" class="close" data-dismiss="modal" (click)="dismissAlert()"  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group"> 
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Title :</label>
+                    <input type="text" placeholder="title..." class="form-control"  formControlName="title" id='titleEdit'  value={{title}} (change)="ChangeInput($event)">
+                </div>
+                <div class="form-group">       
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Category :</label> 
+                    <input type="text" placeholder="category..." class="form-control"  formControlName="category" id='categoryEdit'  value={{category}} (change)="ChangeInput($event)">
+                </div>
+                <div class="form-group">       
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">price :</label> 
+                    <input type="text" placeholder="price..." class="form-control" formControlName="price"  id='priceEdit' value={{price}}>
+                </div>
+                <div class="form-group">  
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">price Promo :</label>      
+                    <input type="text" placeholder="pricePromo..." class="form-control"  formControlName="pricePromo" id='pricePromoEdit' value={{pricepromo}} (change)="ChangeInput($event)">
+                </div>
+                <div class="form-group"> 
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Producer :</label>  
+                    <input type="text" placeholder="producer..." class="form-control"  formControlName="producer" id='producerEdit' value={{producer}} (change)="ChangeInput($event)">
+                </div>
+                <div class="form-group">    
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Stock :</label>    
+                    <input type="text" placeholder="stock..." class="form-control"  formControlName="stock" id='StockEdit' value={{stock}} (change)="ChangeInput($event)">
+                </div>
+                <div class="form-group">       
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">ImageUrl :</label> 
+                    <input type="text" placeholder="imageUrl..." class="form-control"  formControlName="imageUrl" id='imageUrlEdit' value={{imageUrl}} (change)="ChangeInput($event)">
+                </div>
+                <div class="form-group">
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Descreption :</label>
+                    <textarea class="form-control"  formControlName="descreption" placeholder="descreption..." id='descreptionEdit' value={{description}} (change)="ChangeInput($event)"></textarea>
+                </div>
+            </form>
+            <div class="alert alert-success" role="alert" *ngIf="alert">
+                    product Updated
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="dismissAlert()"  >Close</button>
+            <button type="button"  class="btn btn-success" (click)="EditProduct()" >Add Product</button>
+        </div>
+        </div>
+    </div>
+    </div>  
