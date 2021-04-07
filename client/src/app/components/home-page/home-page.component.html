@@ -36,14 +36,15 @@
   <div class="card-promo" >
 
 <div *ngFor="let product of products">  <div class="card card-item" style="width: 20.5rem;">
-  <a class="new-box new-box-infos new-box-infos-En-Promotion" href="https://www.pharma-shop.tn/soins-anti-taches-et-depigmentants/1676-muriac-serum-intensif-anti-taches-30ml.html"> <span class="new-label">En Promotion</span> </a>
-  
+  <a class="new-box new-box-infos new-box-infos-En-Promotion" routerLink="/product"> <span class="new-label"><a href=""></a> En Promotion</span> </a>
+  <a routerLink="product/{{product._id}}">
   <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
+</a>
 
   <div class="card-body" style="text-align: center;">
-    <h5 class="card-title" style="font-weight: 200;">{{product.title}} </h5>
+    <h5 class="card-title" style="font-weight: 200;"><a routerLink="product">{{product.title}}</a> </h5>
    
-    <h3 class="card-title"> {{product.price}} DT</h3>
+    <h3 class="card-title"><a routerLink="product"> {{product.price}} DT </a></h3>
     <a href="#" class="btn btn-success" style="width: 70%;font-weight: 200;color: white;">Add To Cart
       <i class="fas fa-shopping-cart pr-2"></i></a>
   </div>
