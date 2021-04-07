@@ -21,6 +21,7 @@ import { addProductComponent } from './components/addProduct/addProduct.componen
 import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
 import {ProfilePageComponent} from './components/profile-page/profile-page.component';
+import { SettingComponent } from './components/setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,8 @@ import {ProfilePageComponent} from './components/profile-page/profile-page.compo
     RegisterComponent,
     SinginComponent,
     ProfilePageComponent,
+    SettingComponent
+
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
