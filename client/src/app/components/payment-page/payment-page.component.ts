@@ -9,17 +9,22 @@ import {PaymentService} from '../../services/payment.service';
   styleUrls: ['./payment-page.component.css']
 })
 export class PaymentPageComponent implements OnInit {
-  total:number=0;
+  total:any=0;
   products:any=[];
   cookie:any={};
   address:string="1DasGxAbmd5edVMq3SHVrgtn2X2q8voftU"
   QrCodeLink:string="";
   paidBtc:boolean=false;
+  MethodBtc:boolean=false;
+  amountBtc:any=0;
+  continuePage:boolean=false;
   constructor(private prodservice: ProductService , private paymentservice: PaymentService) { }
 
   ngOnInit(): void {
-    this.QrCodeLink = 'https://www.bitcoinqrcodemaker.com/api/?style=bitcoin&address='+this.address+'&amount=0.000005'
+
+    
     this.GetData()
+    
   }
   GetData(){
     var cookies  = document.cookie;
@@ -40,16 +45,34 @@ export class PaymentPageComponent implements OnInit {
           })
         }
       }
+      
+      this.GetAmount()
       this.products = productsLocal
     }
   }
+  GetAmount(){
+    console.log('a')
+    this.paymentservice.LastPrice().subscribe((data:any)=>{
+
+        this.amountBtc = (this.total * 0.36 ) / data.lprice
+        
+        this.amountBtc = this.amountBtc.toFixed(5)
+        this.total = this.total.toFixed(2)
+    })
+    this.QrCodeLink = 'https://www.bitcoinqrcodemaker.com/api/?style=bitcoin&address='+this.address+'&amount='+this.amountBtc
+  }
 
   checkPayment(){
+
       this.paymentservice.checkBtcPayment(this.address).subscribe((result)=>{
-        if(Number(result) > 0){
+        if(Number(result) >= this.amountBtc){
             this.paidBtc = true
+            this.continuePage = true;
+        }else if(this.MethodBtc){
+          setTimeout(()=>{ this.checkPayment() }, 3000);
         }
       })
+      
   }
  
 
@@ -62,5 +85,16 @@ export class PaymentPageComponent implements OnInit {
         }
     }
     return found
+  }
+
+  changeChek(value:string){
+    if(value == 'bitcoin'){
+      this.continuePage = false;
+      this.MethodBtc = true;
+      this.checkPayment();
+    }else{
+      this.MethodBtc = false;
+      this.continuePage = true;
+    }
   }
 }
