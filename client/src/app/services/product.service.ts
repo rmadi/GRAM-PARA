@@ -27,7 +27,10 @@ export class ProductService {
  }
  getOneProduct(id:string){
     return this.http.get("http://localhost:5555/product/"+id)
- }
+  }
+   subscribee(email:string) {
+    return this.http.post("http://localhost:5555/newsLetter/create",{email})
+  } 
 }
 
 
