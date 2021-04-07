@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../../services/product.service';
+import {ActivatedRoute} from '@angular/router'
 
 
 
@@ -11,16 +12,22 @@ import {ProductService} from '../../services/product.service';
 })
 
 export class ProductComponent implements OnInit {
-  mydata:any=[]
+  product:any=[];
+  id : any;
 
-  constructor( private prodservice: ProductService) { }
+  constructor( private prodservice: ProductService ,private router : ActivatedRoute) { }
   ngOnInit(): void {
+    console.log('router params ',this.router.snapshot.params)
+    this.id = this.router.snapshot.params;
+    console.log('this is my id stroed in my component',this.id)
+
     this.getproducts()
+ 
   }
   getproducts() {
-    this.prodservice.getproduct().subscribe((data) => {
-      this.mydata=data
+    this.prodservice.getOneProduct(this.id.id).subscribe((data) => {
+      this.product = data
+         console.log('data', this.product)
     })
   }
-
 }

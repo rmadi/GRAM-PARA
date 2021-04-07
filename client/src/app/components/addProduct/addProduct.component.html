@@ -1,0 +1,39 @@
+<div class="modal-content" style="width:50%;margin: auto;margin-top:50px;">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">        
+                <input type="text" placeholder="title..." class="form-control" id='titleaa'    (change)="this.changeData($event)">
+            </div>
+            <div class="form-group">        
+                <input type="text" placeholder="category..." class="form-control"   id="categoryaa"  (change)="this.changeData($event)">
+            </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="price..." class="form-control"   id="priceaa" (change)="this.changeData($event)">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="pricePromo..." class="form-control"   id="pricePromoaa"  (change)="this.changeData($event)">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="producer..." class="form-control"   id="produceraa"  (change)="this.changeData($event)">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="imageUrl..." class="form-control"   id="imageUrlaa"  (change)="this.changeData($event)">
+                </div>
+                <div class="form-group">        
+                    <input type="text" placeholder="stock..." class="form-control"   id="stockaa"  (change)="this.changeData($event)">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control"  placeholder="description..." id="descriptionaa" (change)="this.changeData($event)"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button"  class="btn btn-success" (click)="this.addproducts()">Add Product</button>
+        </div>
+        </div>
+
+     
+

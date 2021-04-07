@@ -1,6 +1,6 @@
 <section class="mb-5">
   <p>Product details</p>
-  <div class="row" *ngFor="let product of mydata">
+  <div class="row" >
     <div class="col-md-6 mb-4 mb-md-0">
       <div class="mdb-lightbox">
         <div class="row product-gallery mx-1">
@@ -15,14 +15,16 @@
     </div>
     <div class="col-md-6">
       <h5 class="title">{{product.title}}</h5>
-      <p class="mb-2 text-muted text-uppercase small">{{product.name}}</p>
+      <p class="pt-1">{{product.category}}</p>
+      <p class="pt-1">{{product.stock}}</p>
       <!-- price -->
       <h6>
+        <p id="reduction_percent_display">-20%</p>
         <span class="text-danger mr-1">{{product.pricePromo}} DT TTC</span>
         <p id="reduction_percent">
-          <p id="reduction_percent_display">-20%</p>
         <span class="text-grey"><s>{{product.price}} DT </s></span>
       </h6>
+      <p class="pt-2">{{product.producer}}</p>
       <p class="pt-1">{{product.description}}</p>
       <hr>
       <div class="table-responsive mb-2">
@@ -45,7 +47,6 @@
           </tbody>
         </table>
       </div>
-      <button type="button" class="btn btn-outline-success btn-md mr-1 mb-3">Buy now</button>
       <button type="button" class="btn btn-outline-success btn-md mr-1 mb-3">
         <i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
         <button type="button" class="btn btn-danger btn-md px-3 mb-3 material-tooltip-main" data-toggle="tooltip"

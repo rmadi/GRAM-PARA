@@ -3,6 +3,9 @@ body {
     margin: 0px;
     padding: 0px;
   }
+
+ 
+
   .btn-search-pos{
     position: relative;
     left: 220px;
@@ -19,6 +22,7 @@ body {
     position:relative; 
     right: 50px;
  }
+
   .form-control{
     width: 400px;
 
