@@ -26,10 +26,18 @@ alertCheck:boolean=false;
   onsubmit() {
     this.authservice.login(this.email, this.password).subscribe((data:any) => {
       console.log(data)
+<<<<<<< HEAD
+      if(data.role == 'client'){
+        document.location.href="/";
+      }else if(data.role == 'admin'){
+        window.location.href = window.location.origin+'/admin/products';
+      }{
+=======
       if(data.message == 'succeess'){
         // document.location.href="/";
         this.goToadmin()
           }else{
+>>>>>>> fdfbfe2249f0f3e54104bdb18ec5aa8b120b7685
         console.log('herer')
         this.alertCheck = true;
       }

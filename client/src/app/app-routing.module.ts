@@ -14,6 +14,24 @@ import { AdminProductsComponent } from './components/admin-products/admin-produc
 import { CategoriePageComponent } from './components/categorie-page/categorie-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { SettingComponent } from './components/setting/setting.component';
+<<<<<<< HEAD
+import { OrderCompleteComponent } from './components/order-complete/order-complete.component';
+const routes: Routes = [
+ 
+  {path: '', component:HomePageComponent},
+ {path:'product/:id', component:ProductComponent},
+{path: 'register', component:RegisterComponent},
+  {path: 'singin', component:SinginComponent},
+  {path: 'cart', component:CartComponent},
+  {path:'cart/payment', component:PaymentPageComponent},
+  {path: 'admin/products', component:AdminProductsComponent},
+ {path:'admin/addProduct', component:addProductComponent},
+ {path:'categorie', component:CategoriePageComponent},
+ {path:'profile', component:ProfilePageComponent},
+ {path: 'setting', component:SettingComponent},
+ {path:'cart/ordercomplete',component:OrderCompleteComponent}
+
+=======
 import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -31,6 +49,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfilePageComponent },
   { path: 'admin/adminorders', component: AdminOrdersComponent },
   { path: 'setting', component: SettingComponent },
+>>>>>>> fdfbfe2249f0f3e54104bdb18ec5aa8b120b7685
 ];
 
 @NgModule({

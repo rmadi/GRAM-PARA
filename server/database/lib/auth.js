@@ -13,7 +13,7 @@ module.exports = {
       RandomString : (length)=>{
         return crypto.randomBytes(length).toString('hex');
       },
-      CreateSession : (req,res,user_id,session)=>{
+      CreateSession : (req,res,user_id,session,role)=>{
           console.log (sessionController)
         sessionController.session.addSession(user_id,session)
                 res.cookie('GRAM', session,{
@@ -22,7 +22,7 @@ module.exports = {
                     secure: false
                 })
                 console.log(session)
-                res.status(200).send({"message":"succeess"})
+                res.status(200).send({"message":"succeess","role":role})
           
 },
 VerifySession : (req,res,next)=>{
