@@ -29,7 +29,7 @@
                 <p>skin</p>
             </div>
             <div class="col-md-2" style="margin:auto" >
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#editmodal" (click)="EditSelected(product._id,product.title,product.price,product.pricePromo,product.imageUrl,product.description,product.producer,product.category,product.stock)" >Edit</button>
+                <button type="button" class="btn btn-info" style='background-color:#e1b12c;border: #e1b12c;' data-toggle="modal" data-target="#editmodal" (click)="EditSelected(product._id,product.title,product.price,product.pricePromo,product.imageUrl,product.description,product.producer,product.category,product.stock)" >Edit</button>
             </div>
             <div class="col-md-2" style="margin:auto" >
                 <button type="button" class="btn btn-danger" (click)="deleteProduct(product._id)" >Delete</button>
@@ -51,35 +51,35 @@
             <form>
                 <div class="form-group"> 
                     <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Title :</label>
-                    <input type="text" placeholder="title..." class="form-control"  formControlName="title" id='titleEdit'  value={{title}} (change)="ChangeInput($event)">
+                    <input type="text" placeholder="title..." class="form-control"   id='titleEdit'  value={{title}} (change)="ChangeInput($event)">
                 </div>
                 <div class="form-group">       
                     <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Category :</label> 
-                    <input type="text" placeholder="category..." class="form-control"  formControlName="category" id='categoryEdit'  value={{category}} (change)="ChangeInput($event)">
+                    <input type="text" placeholder="category..." class="form-control"  id='categoryEdit'  value={{category}} (change)="ChangeInput($event)">
                 </div>
                 <div class="form-group">       
                     <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">price :</label> 
-                    <input type="text" placeholder="price..." class="form-control" formControlName="price"  id='priceEdit' value={{price}}>
+                    <input type="text" placeholder="price..." class="form-control"   id='priceEdit' value={{price}}>
                 </div>
                 <div class="form-group">  
                     <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">price Promo :</label>      
-                    <input type="text" placeholder="pricePromo..." class="form-control"  formControlName="pricePromo" id='pricePromoEdit' value={{pricepromo}} (change)="ChangeInput($event)">
+                    <input type="text" placeholder="pricePromo..." class="form-control"   id='pricePromoEdit' value={{pricepromo}} (change)="ChangeInput($event)">
                 </div>
                 <div class="form-group"> 
                     <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Producer :</label>  
-                    <input type="text" placeholder="producer..." class="form-control"  formControlName="producer" id='producerEdit' value={{producer}} (change)="ChangeInput($event)">
+                    <input type="text" placeholder="producer..." class="form-control"   id='producerEdit' value={{producer}} (change)="ChangeInput($event)">
                 </div>
                 <div class="form-group">    
                     <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Stock :</label>    
-                    <input type="text" placeholder="stock..." class="form-control"  formControlName="stock" id='StockEdit' value={{stock}} (change)="ChangeInput($event)">
+                    <input type="text" placeholder="stock..." class="form-control"   id='StockEdit' value={{stock}} (change)="ChangeInput($event)">
                 </div>
                 <div class="form-group">       
                     <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">ImageUrl :</label> 
-                    <input type="text" placeholder="imageUrl..." class="form-control"  formControlName="imageUrl" id='imageUrlEdit' value={{imageUrl}} (change)="ChangeInput($event)">
+                    <input type="text" placeholder="imageUrl..." class="form-control"  id='imageUrlEdit' value={{imageUrl}} (change)="ChangeInput($event)">
                 </div>
                 <div class="form-group">
-                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Descreption :</label>
-                    <textarea class="form-control"  formControlName="descreption" placeholder="descreption..." id='descreptionEdit' value={{description}} (change)="ChangeInput($event)"></textarea>
+                    <label  style="font-size: 16px;font-weight: 200;margin-left: 8px;color: black;">Description :</label>
+                    <textarea class="form-control"   placeholder="descreption..." id='descreptionEdit' value={{description}} (change)="ChangeInput($event)"></textarea>
                 </div>
             </form>
             <div class="alert alert-success" role="alert" *ngIf="alert">
@@ -88,7 +88,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="dismissAlert()"  >Close</button>
-            <button type="button"  class="btn btn-success" (click)="EditProduct()" >Add Product</button>
+            <button type="button"  class="btn btn-success" (click)="EditProduct()" >Edit Product</button>
         </div>
         </div>
     </div>

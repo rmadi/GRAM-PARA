@@ -10,9 +10,8 @@ export class ProductService {
   
   constructor(private http: HttpClient) {
   }
-  getproduct() {
-
-     return this.http.get("http://localhost:5555/product/")
+  getproduct() {                                                                                                                                                                                                                                                                                       
+     return this.http.get("http://localhost:5555/product")
 
   }
   addproduct(title:string, category:string, price:string , pricePromo:string, producer: string,  imageUrl:string,  stock: string, description: string  ) {
@@ -27,7 +26,9 @@ export class ProductService {
  }
  getOneProduct(id:string){
     return this.http.get("http://localhost:5555/product/"+id)
- }
+  }
+   
+  
 }
 
 
