@@ -16,27 +16,25 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
 import { SettingComponent } from './components/setting/setting.component';
 import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
 const routes: Routes = [
- 
-  {path: '', component:HomePageComponent},
- {path:'product/:id', component:ProductComponent},
-{path: 'register', component:RegisterComponent},
-  {path: 'singin', component:SinginComponent},
-  {path: 'cart', component:CartComponent},
-  {path:'cart/payment', component:PaymentPageComponent},
-  {path: 'admin', component:AdminComponent},
- {path:'addProduct', component:addProductComponent},
- {path:'admin', redirectTo:'admin', pathMatch:'full'},
- {path:'categorie/:id', component:CategoriePageComponent},
- {path: 'admin/addProduct', component:addProductComponent},
-{path:'admin/adminproduct', component:AdminProductsComponent},
- {path:'profile', component:ProfilePageComponent},
- {path:'admin/adminorders', component:AdminOrdersComponent},
- {path: 'setting', component:SettingComponent}
-
+  { path: '', component: HomePageComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'singin', component: SinginComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'cart/payment', component: PaymentPageComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'addProduct', component: addProductComponent },
+  { path: 'admin', redirectTo: 'admin', pathMatch: 'full' },
+  { path: 'categorie/:id', component: CategoriePageComponent },
+  { path: 'admin/addProduct', component: addProductComponent },
+  { path: 'admin/adminproduct', component: AdminProductsComponent },
+  { path: 'profile', component: ProfilePageComponent },
+  { path: 'admin/adminorders', component: AdminOrdersComponent },
+  { path: 'setting', component: SettingComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
