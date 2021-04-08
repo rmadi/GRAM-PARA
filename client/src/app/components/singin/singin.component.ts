@@ -9,6 +9,7 @@ export class SinginComponent implements OnInit {
 
 email : string = ""
 password : string = ""
+alertCheck:boolean=false;
   constructor(private authservice: authentication) { }
 
   ngOnInit(): void {
@@ -22,8 +23,14 @@ password : string = ""
     this.password = (target as HTMLButtonElement).value
   }
   onsubmit() {
-    this.authservice.login(this.email, this.password).subscribe((data) => {
+    this.authservice.login(this.email, this.password).subscribe((data:any) => {
       console.log(data)
+      if(data.message == 'succeess'){
+        document.location.href="/";
+          }else{
+        console.log('herer')
+        this.alertCheck = true;
+      }
     })
   }
 
