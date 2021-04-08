@@ -1,8 +1,8 @@
 <div class="container" style="border: 0.1px solid #b2bec3;margin-top: 50px;width: 80%;margin-bottom: 10px;padding: 29px;">
-    <div class="row">
+    <div class="row" style="font-weight: 500;">
         1 - Address
     </div>
-    <div style="margin-left:15px;background-color: #dfe6e9;width: 40%;margin-top: 25px;padding: 12px;" >
+    <div style="margin-left:15px;background-color: rgb(99, 110, 114,0.18);width: 40%;margin-top: 25px;padding: 12px;" >
         <div class="row" style="margin-left: 25px;" >
             Full Name : Achref Ben Thameur
         </div>
@@ -25,13 +25,13 @@
             Phone Number : 55509756
         </div>
     </div>
-    <div class="row" style="margin-top: 25px;">
+    <div class="row" style="margin-top: 25px;font-weight: 500;">
         2 - Payment Method
     </div>
     <div style="margin-left: 30px;font-size: 18px;margin-top: 20px;">
             <form name = 'radiocheck'>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="PaymentMethod" id='bitcoin' value="bitcoin" checked>
+                    <input class="form-check-input" type="radio" name="PaymentMethod" id='bitcoin' value="bitcoin" style='background-color:rgb(39, 174, 96);' checked>
                     <label class="form-check-label" for="bitcoin">
                       Bitcoin
                     </label>
@@ -56,13 +56,13 @@
                 Status :  <p style="color:#d63031 ;">UNPAID</p>
             </div>
             <div class="row" style="margin-top: 10px;">
-                address : {{address}}
+                Address : {{address}}
             </div>
             <div class="row" style="margin-top: 15px;">
-                amount in TND :<br> {{total}} DT
+                Amount in TND : {{total}} DT
             </div>
             <div class="row" style="margin-top: 15px;">
-                amount in Bitcoin : 0.000005 BTC
+                Amount in Bitcoin : 0.000005 BTC
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
     <div class="row justify-content-end">
         <div class="col-2">
                 <div>
-                    <button type="button" class="btn btn-primary" disabled style="margin-top:10px">Complete</button>
+                    <button type="button" class="btn btn-success" disabled style="margin-top:10px">Complete</button>
                 </div>
         </div>
     </div>
