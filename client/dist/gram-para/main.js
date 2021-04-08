@@ -202,16 +202,21 @@ class SinginComponent {
         this.authservice.login(this.email, this.password).subscribe((data) => {
             console.log(data);
             if (data.message == 'succeess') {
-                document.location.href = "/";
+                // document.location.href="/";
+                this.goToadmin();
             }
             else {
                 console.log('herer');
                 this.alertCheck = true;
             }
         });
+        this.goToadmin();
     }
     goToRegister() {
         this.route.navigate(["register"]);
+    }
+    goToadmin() {
+        this.route.navigate(["admin"]);
     }
 }
 SinginComponent.ɵfac = function SinginComponent_Factory(t) { return new (t || SinginComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_authentication_service__WEBPACK_IMPORTED_MODULE_1__["authentication"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
@@ -2853,7 +2858,7 @@ const routes = [
     { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_0__["AdminComponent"] },
     { path: 'addProduct', component: _components_addProduct_addProduct_component__WEBPACK_IMPORTED_MODULE_8__["addProductComponent"] },
     { path: 'admin', redirectTo: 'admin', pathMatch: 'full' },
-    { path: 'categorie/:id', component: _components_categorie_page_categorie_page_component__WEBPACK_IMPORTED_MODULE_9__["CategoriePageComponent"] },
+    { path: 'categorie', component: _components_categorie_page_categorie_page_component__WEBPACK_IMPORTED_MODULE_9__["CategoriePageComponent"] },
     { path: 'profile', component: _components_profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_10__["ProfilePageComponent"] },
     { path: 'setting', component: _components_setting_setting_component__WEBPACK_IMPORTED_MODULE_11__["SettingComponent"] }
 ];

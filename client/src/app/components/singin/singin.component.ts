@@ -27,19 +27,23 @@ alertCheck:boolean=false;
     this.authservice.login(this.email, this.password).subscribe((data:any) => {
       console.log(data)
       if(data.message == 'succeess'){
-        document.location.href="/";
+        // document.location.href="/";
+        this.goToadmin()
           }else{
         console.log('herer')
         this.alertCheck = true;
       }
     })
-
+this.goToadmin()
   }
 
  
 goToRegister() {
   this.route.navigate(["register"])
 
+}
+goToadmin() {
+  this.route.navigate(["admin"])
 }
 
   
