@@ -21,7 +21,8 @@ module.exports = {
                     httpOnly: false, 
                     secure: false
                 })
-                res.status(200).send('success')
+                console.log(session)
+                res.status(200).send({"message":"succeess"})
           
 },
 VerifySession : (req,res,next)=>{
@@ -43,7 +44,7 @@ VerifySession : (req,res,next)=>{
     }
 },
 VerifyAdminSession : (req,res,next)=>{
-    if(req.cookies.RBKCTF){
+    if(req.cookies.GRAM){
         models.session.Get(req.cookies.RBKCTF)
             .then((result)=>{
                 if(result.length >0 && (result[0].date > Date.now()) && result[0].id == 0){

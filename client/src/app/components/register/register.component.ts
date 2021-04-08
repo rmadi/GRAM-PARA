@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -26,7 +27,8 @@ export class RegisterComponent implements OnInit {
   // data:Object = {firstName:'', lastName:'', email:'', password:'', phone:'', city:'',
   //  adress1:'', adress2:'', zipCode:'', role:'' }
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService,
+    private router: Router) {}
 
   ngOnInit(): void {}
   changeData(event: Event) {
@@ -84,6 +86,8 @@ export class RegisterComponent implements OnInit {
     this.userService.postFrom({firstName:this.firstName, lastName:this.lastName, email:this.email, password:this.password, phone:this.phone, city:this.city, adress1:this.adress1
     
       ,adress2:this.adress2, zipCode:this.zipCode, role:this.role}).subscribe(()=>console.log('your data is posted'))
+
+      this.router.navigate(["singin"])
 
 
     }
