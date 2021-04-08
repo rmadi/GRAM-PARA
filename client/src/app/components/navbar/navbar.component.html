@@ -1,5 +1,4 @@
-
-<nav class="navbar  navbar-expand-lg navbar-dark nav-pc">
+<nav class="navbar navbar-expand-lg navbar-dark nav-pc">
   <div class="col-2">
     <a href="/">
       <img
@@ -40,18 +39,16 @@
           Skin
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/{CERINA AROMA}}"
             >BAUME EMOLLIENT</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/BARNANGEN"
             >Evoluderm</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Gliss Masque Hydratant"
             >CERINA AROMA</a
           >
-          <a class="dropdown-item" routerLink="categorie"
-            >BARNANGEN</a
-          >
+          <a class="dropdown-item" routerLink="categorie/Hemani">BARNANGEN</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -66,16 +63,15 @@
           Hair
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="product/606b4a68c2834657143e4b43"
-            >Hemani</a
-          >
           <a
             class="dropdown-item"
-            routerLink="categorie"
+            routerLink="categorie/Brazilian Glow Kit Kératine"
+            >Hemani</a
           >
+          <a class="dropdown-item" routerLink="categorie">
             Brazilian Glow Kit Kératine</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Gliss Masque Hydratant</a
           >
         </div>
@@ -93,19 +89,12 @@
           Mother & Baby
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Evoluderm"
             >Brazilian Glow Kit Kératine</a
           >
-          <a
-            class="dropdown-item"
-            routerLink="categorie"
-          >
-            Farmasi Pack</a
-          >
-          <a class="dropdown-item" routerLink="categorie"
-            >Garnier</a
-          >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/"> Farmasi Pack</a>
+          <a class="dropdown-item" routerLink="categorie/Hemani">Garnier</a>
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Melon - Watermelon Yellow</a
           >
         </div>
@@ -123,19 +112,16 @@
           Body
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >French Kiss Vanilla</a
           >
-          <a
-            class="dropdown-item"
-            routerLink="categorie"
-          >
+          <a class="dropdown-item" routerLink="categorie">
             Chocolate - Feathers</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Mix - Cocktail Ice Cream</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Durian Fruit</a
           >
         </div>
@@ -153,19 +139,16 @@
           Solar
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Wine - Rosso Del Veronese Igt</a
           >
-          <a
-            class="dropdown-item"
-            routerLink="categorie"
-          >
+          <a class="dropdown-item" routerLink="categorie">
             Bread - Pita, Mini</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Versatainer Nc - 8288</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Chicken - White Meat With Tender</a
           >
         </div>
@@ -182,32 +165,35 @@
           Medical material
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Moisturizing and nourishing</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Anti-aging and anti-wrinkle
           </a>
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Anti-dark spots and depigmenting agents</a
           >
-          <a class="dropdown-item" routerLink="categorie"
+          <a class="dropdown-item" routerLink="categorie/Hemani"
             >Cleanser and makeup remover</a
           >
         </div>
       </li>
-      
-      
     </ul>
   </div>
-  <div *ngIf ='this.logged; then loggedIn else notlogged'></div>
+  <div *ngIf="this.logged; then loggedIn; else notlogged"></div>
 </nav>
 
-
 <ng-template #notlogged>
-  <div class=" col-2 " style="float: right;" >
+  <div class="col-2" style="float: right">
     <a
-      style="color: black; font-size: 16px; color: white;  padding: 10px; font-size: 25px;"
+      style="
+        color: black;
+        font-size: 16px;
+        color: white;
+        padding: 10px;
+        font-size: 25px;
+      "
       routerLink="singin"
       routerLinkActive="active"
     >
@@ -216,46 +202,59 @@
     <a
       routerLink="register"
       routerLinkActive="active"
-      style="color: white; font-size: 16px; border: none; padding: 10px; font-size: 25px;"
+      style="
+        color: white;
+        font-size: 16px;
+        border: none;
+        padding: 10px;
+        font-size: 25px;
+      "
       >sign up
     </a>
   </div>
-  </ng-template>
-  
-  <ng-template #loggedIn>
-    <div class=" col-3 " style="float: right;margin-left: 40px;" >
-      <a
-        style="color: black; font-size: 16px; color: white;  padding: 10px; font-size: 20px;"
-        routerLink="profile"
-        routerLinkActive="active"
-      >
-        Profile
-      </a>
-      <a
-        routerLink="setting"
-        routerLinkActive="active"
-        style="color: white; font-size: 16px; border: none; padding: 10px; font-size: 20px;"
-        >settings
-      </a>
-    
-      
-      <a
-      (click) = "logout()"
-      style="color: white; font-size: 16px; border: none; padding: 10px; font-size: 20px;"
-      >logout
+</ng-template>
+
+<ng-template #loggedIn>
+  <div class="col-3" style="float: right; margin-left: 40px">
+    <a
+      style="
+        color: black;
+        font-size: 16px;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+      "
+      routerLink="profile"
+      routerLinkActive="active"
+    >
+      Profile
     </a>
     <a
-        routerLink="cart"
-        style="
-          color: white;
-        "
-      >
-        <i
-          class="fas fa-cart-plus"
-          style="size: 12x;margin-left: 45px;"
-          
-         
-        ></i>
-      </a>
-    </div>
-    </ng-template>
+      routerLink="setting"
+      routerLinkActive="active"
+      style="
+        color: white;
+        font-size: 16px;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+      "
+      >settings
+    </a>
+
+    <a
+      (click)="logout()"
+      style="
+        color: white;
+        font-size: 16px;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+      "
+      >logout
+    </a>
+    <a routerLink="cart" style="color: white">
+      <i class="fas fa-cart-plus" style="size: 12x; margin-left: 45px"></i>
+    </a>
+  </div>
+</ng-template>

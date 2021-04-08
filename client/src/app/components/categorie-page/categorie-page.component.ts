@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {ProductService} from '../../services/product.service';
 
 
@@ -13,7 +14,8 @@ export class CategoriePageComponent implements OnInit {
   products:any=[]
   Pageproducts:any=[]
   pages:any=[]
-  constructor(private prodservice: ProductService) { 
+  constructor(private prodservice: ProductService,
+    private route : Router) { 
 
   }
 

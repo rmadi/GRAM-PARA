@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {authentication} from '../../services/authentication.service'
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,11 @@ import {authentication} from '../../services/authentication.service'
 export class NavbarComponent implements OnInit {
   logged:boolean=false;
 
-  constructor(private authenticationservice: authentication) { }
+  constructor(private authenticationservice: authentication,
+    private router : ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log("**********",this.router.snapshot.params)
     console.log(document.cookie)
     if(document.cookie.includes('GRAM')){
       
