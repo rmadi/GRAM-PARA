@@ -14,6 +14,7 @@ import { AdminProductsComponent } from './components/admin-products/admin-produc
 import { CategoriePageComponent } from './components/categorie-page/categorie-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { SettingComponent } from './components/setting/setting.component';
+<<<<<<< HEAD
 import { OrderCompleteComponent } from './components/order-complete/order-complete.component';
 const routes: Routes = [
  
@@ -30,10 +31,29 @@ const routes: Routes = [
  {path: 'setting', component:SettingComponent},
  {path:'cart/ordercomplete',component:OrderCompleteComponent}
 
+=======
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+const routes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'singin', component: SinginComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'cart/payment', component: PaymentPageComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'addProduct', component: addProductComponent },
+  { path: 'admin', redirectTo: 'admin', pathMatch: 'full' },
+  { path: 'categorie/:id', component: CategoriePageComponent },
+  { path: 'admin/addProduct', component: addProductComponent },
+  { path: 'admin/adminproduct', component: AdminProductsComponent },
+  { path: 'profile', component: ProfilePageComponent },
+  { path: 'admin/adminorders', component: AdminOrdersComponent },
+  { path: 'setting', component: SettingComponent },
+>>>>>>> fdfbfe2249f0f3e54104bdb18ec5aa8b120b7685
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
