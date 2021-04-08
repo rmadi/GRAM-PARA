@@ -1,5 +1,5 @@
 <section class="mb-5">
-  <p>Product details</p>
+  <p></p>
   <div class="row" >
     <div class="col-md-6 mb-4 mb-md-0">
       <div class="mdb-lightbox">
@@ -16,8 +16,9 @@
     </div>
     <div class="col-md-6">
       <h5 class="title">{{product.title}}</h5>
-      <p class="pt-1">{{product.category}}</p>
-      <p class="pt-1">{{product.stock}}</p>
+      <h1 class="pt-1">{{product.category}}</h1>
+      <h6 class="pt-1">{{product.description}}</h6>
+      <p class="pt-1">{{product.producer}}</p>
       <!-- price -->
       <h6>
         <p id="reduction_percent_display">-20%</p>
@@ -25,8 +26,7 @@
         <p id="reduction_percent">
         <span class="text-grey"><s>{{product.price}} DT </s></span>
       </h6>
-      <p class="pt-2">{{product.producer}}</p>
-      <p class="pt-1">{{product.description}}</p>
+      <p class="pt-2">{{product.stock}}</p>
       <hr>
       <div class="table-responsive mb-2">
         <table class="table table-sm table-borderless">

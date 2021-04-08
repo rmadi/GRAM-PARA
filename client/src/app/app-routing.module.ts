@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AdminComponent } from './components/admin/admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './components/cart/cart.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -7,8 +8,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { ProductComponent } from './components/product/product.component';
-import { AdminComponent } from './components/admin/admin.component';
 
+import { addProductComponent } from './components/addProduct/addProduct.component';
+import { AdminProductsComponent } from './components/admin-products/admin-products.component';
 const routes: Routes = [
  
   {path: '', component:HomePageComponent},
@@ -19,8 +21,9 @@ const routes: Routes = [
   {path: 'singin', component:SinginComponent},
   {path: 'cart', component:CartComponent},
   {path:'payment', component:PaymentPageComponent},
-  {path: 'admin', component:AdminComponent}
+  {path: 'admin', component:AdminComponent},
   
+  {path:'addProduct', component:addProductComponent},
   // {path: '**', redirectTo:''}
 
 ];
@@ -29,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
