@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
     private router : ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.router.snapshot.params)
+    console.log("**********",this.router.snapshot.params)
     console.log(document.cookie)
     if(document.cookie.includes('GRAM')){
       
