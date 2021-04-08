@@ -1593,11 +1593,13 @@ function NavbarComponent_ng_template_81_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 class NavbarComponent {
-    constructor(authenticationservice) {
+    constructor(authenticationservice, router) {
         this.authenticationservice = authenticationservice;
+        this.router = router;
         this.logged = false;
     }
     ngOnInit() {
+        console.log(this.router.snapshot.params);
         console.log(document.cookie);
         if (document.cookie.includes('GRAM')) {
             this.checkLog(this.cookiefinder(document.cookie));
@@ -1626,7 +1628,7 @@ class NavbarComponent {
         return found;
     }
 }
-NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_authentication_service__WEBPACK_IMPORTED_MODULE_1__["authentication"])); };
+NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_authentication_service__WEBPACK_IMPORTED_MODULE_1__["authentication"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"])); };
 NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 83, vars: 3, consts: [[1, "navbar", "navbar-expand-lg", "navbar-dark", "nav-pc"], [1, "col-2"], ["href", "/"], ["src", "../../../assets/pictures/logo.png", "alt", "", "height", "50px", "width", "100px"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNavDropdown", "aria-controls", "navbarNavDropdown", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon", 2, "color", "white"], ["id", "navbarNavDropdown", 1, "collapse", "navbar-collapse", "justify-content-center", 2, "z-index", "2"], [1, "navbar-nav"], [1, "nav-item", "dropdown"], ["href", "#", "id", "navbarDropdownMenuLink", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle", 2, "color", "white"], ["aria-labelledby", "navbarDropdownMenuLink", 1, "dropdown-menu"], ["routerLink", "categorie", 1, "dropdown-item"], ["id", "navbarDropdownMenuLink", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle", 2, "color", "white"], ["routerLink", "product/606b4a68c2834657143e4b43", 1, "dropdown-item"], [4, "ngIf", "ngIfThen", "ngIfElse"], ["notlogged", ""], ["loggedIn", ""], [1, "col-2", 2, "float", "right"], ["routerLink", "singin", "routerLinkActive", "active", 2, "color", "black", "font-size", "16px", "color", "white", "padding", "10px", "font-size", "25px"], ["routerLink", "register", "routerLinkActive", "active", 2, "color", "white", "font-size", "16px", "border", "none", "padding", "10px", "font-size", "25px"], [1, "col-3", 2, "float", "right", "margin-left", "40px"], ["routerLink", "profile", "routerLinkActive", "active", 2, "color", "black", "font-size", "16px", "color", "white", "padding", "10px", "font-size", "20px"], ["routerLink", "setting", "routerLinkActive", "active", 2, "color", "white", "font-size", "16px", "border", "none", "padding", "10px", "font-size", "20px"], [2, "color", "white", "font-size", "16px", "border", "none", "padding", "10px", "font-size", "20px", 3, "click"], ["routerLink", "cart", 2, "color", "white"], [1, "fas", "fa-cart-plus", 2, "size", "12x", "margin-left", "45px"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -2851,7 +2853,7 @@ const routes = [
     { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_0__["AdminComponent"] },
     { path: 'addProduct', component: _components_addProduct_addProduct_component__WEBPACK_IMPORTED_MODULE_8__["addProductComponent"] },
     { path: 'admin', redirectTo: 'admin', pathMatch: 'full' },
-    { path: 'categorie', component: _components_categorie_page_categorie_page_component__WEBPACK_IMPORTED_MODULE_9__["CategoriePageComponent"] },
+    { path: 'categorie/:id', component: _components_categorie_page_categorie_page_component__WEBPACK_IMPORTED_MODULE_9__["CategoriePageComponent"] },
     { path: 'profile', component: _components_profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_10__["ProfilePageComponent"] },
     { path: 'setting', component: _components_setting_setting_component__WEBPACK_IMPORTED_MODULE_11__["SettingComponent"] }
 ];

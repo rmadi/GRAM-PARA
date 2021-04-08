@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'admin', component:AdminComponent},
  {path:'addProduct', component:addProductComponent},
  {path:'admin', redirectTo:'admin', pathMatch:'full'},
- {path:'categorie', component:CategoriePageComponent},
+ {path:'categorie/:id', component:CategoriePageComponent},
  {path:'profile', component:ProfilePageComponent},
  {path: 'setting', component:SettingComponent}
 
