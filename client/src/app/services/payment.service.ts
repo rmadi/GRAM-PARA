@@ -13,4 +13,7 @@ export class PaymentService {
  checkBtcPayment(address:string){
     return this.http.get("https://blockchain.info/q/addressbalance/"+address+"?confirmations=0")
  }
+ LastPrice(){
+  return this.http.get("http://cex.io/api/last_price/BTC/USD")
+}
 }

@@ -24,7 +24,7 @@ addUser :  (req,res) => {
        firstName: req.body.firstName,
        lastName: req.body.lastName,
        email: req.body.email,
-       password: req.body.password,
+       password: auth.createHash(req.body.password),
        city: req.body.city,
        address1: req.body.address1,
        address1: req.body.address1,
@@ -67,15 +67,15 @@ findUser :  (req, res) => {
                             return
                         }
 
-    
-                      if(result.length >0 && result[0].password == req.body.password){
+                        
+                      if(result.length >0 && result[0].password == auth.createHash(req.body.password)){
 
                          var session = auth.RandomString(32)
 
                         auth.CreateSession(req,res,result[0]._id,session)
 
                       }else{
-                        res.send("password wrong");
+                        res.send({"message":"password wrong"});
                       }
                       
                    })
