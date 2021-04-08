@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'gram-para';
+  showNavFoot:boolean=true;
+  ngOnInit(): void {
+    if(window.location.href.includes('admin')){
+      this.showNavFoot = false;
+    }
+  }
 }

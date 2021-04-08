@@ -4,25 +4,23 @@
     </div>
     <div style="margin-left:15px;background-color: rgb(99, 110, 114,0.18);width: 40%;margin-top: 25px;padding: 12px;" >
         <div class="row" style="margin-left: 25px;" >
-            Full Name : Achref Ben Thameur
+            Full Name : {{firstName}} {{lastName}}
         </div>
         <div class="row" style="margin-left: 25px;" >
-            Address Line 1 : Rue Berzinji 
+            Address Line 1 : {{address1}}
         </div>
         <div class="row" style="margin-left: 25px;" >
-            Address Line 2 : Rue Berzinji 
+            Address Line 2 : {{address2}}
         </div>
         <div class="row" style="margin-left: 25px;" >
-            City : El Mida
+            City : {{city}}
+        </div>
+        
+        <div class="row" style="margin-left: 25px;" >
+            Postal Code : {{zipCode}}
         </div>
         <div class="row" style="margin-left: 25px;" >
-            State : Nabeul
-        </div>
-        <div class="row" style="margin-left: 25px;" >
-            Postal Code : 8044
-        </div>
-        <div class="row" style="margin-left: 25px;" >
-            Phone Number : 55509756
+            Phone Number : {{phone}}
         </div>
     </div>
     <div class="row" style="margin-top: 25px;font-weight: 500;">
@@ -74,7 +72,10 @@
     <div class="row justify-content-end">
         <div class="col-2">
                 <div>
-                    <div *ngIf="continuePage;then continue else continueDisable"></div>
+                    <a routerLink="../ordercomplete">
+                        <div *ngIf="continuePage;then continue else continueDisable"></div>
+                    </a>
+                    
                 </div>
         </div>
     </div>
@@ -83,7 +84,7 @@
 <p style="color:#d63031 ;">UNPAID</p>
 </ng-template >
 <ng-template #paid>
-    <p style="color:#27ae60 ;">UNPAID</p></ng-template >
+    <p style="color:#27ae60 ;">PAID</p></ng-template >
 
     <ng-template #continueDisable>
         <button type="button" class="btn btn-primary" disabled style="margin-top:10px">Complete</button>

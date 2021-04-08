@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { AdminComponent } from './components/admin/admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './components/cart/cart.component';
@@ -14,6 +14,7 @@ import { AdminProductsComponent } from './components/admin-products/admin-produc
 import { CategoriePageComponent } from './components/categorie-page/categorie-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { SettingComponent } from './components/setting/setting.component';
+import { OrderCompleteComponent } from './components/order-complete/order-complete.component';
 const routes: Routes = [
  
   {path: '', component:HomePageComponent},
@@ -22,12 +23,12 @@ const routes: Routes = [
   {path: 'singin', component:SinginComponent},
   {path: 'cart', component:CartComponent},
   {path:'cart/payment', component:PaymentPageComponent},
-  {path: 'admin', component:AdminComponent},
- {path:'addProduct', component:addProductComponent},
- {path:'admin', redirectTo:'admin', pathMatch:'full'},
+  {path: 'admin/products', component:AdminProductsComponent},
+ {path:'admin/addProduct', component:addProductComponent},
  {path:'categorie', component:CategoriePageComponent},
  {path:'profile', component:ProfilePageComponent},
- {path: 'setting', component:SettingComponent}
+ {path: 'setting', component:SettingComponent},
+ {path:'cart/ordercomplete',component:OrderCompleteComponent}
 
 ];
 

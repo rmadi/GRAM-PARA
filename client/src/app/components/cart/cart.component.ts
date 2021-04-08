@@ -10,10 +10,24 @@ export class CartComponent implements OnInit {
   total:number=0;
   products:any=[];
   cookie:any={};
+  redirect:string="../singin"
   constructor(private prodservice: ProductService) { }
 
   ngOnInit(): void {
+    if(this.cookiefinderGRAM(document.cookie).length > 10){
+      this.redirect = "payment"
+    }
     this.GetData()
+  }
+  cookiefinderGRAM(str:string): string{
+    var strx = str.split('; ');
+    var found = ''
+    for (var i = 0; i < strx.length; i++) {
+        if(strx[i].includes('GRAM')){
+           found =  strx[i].replace('GRAM=','')
+        }
+    }
+    return found
   }
   GetData(){
     var cookies  = document.cookie;
@@ -91,7 +105,7 @@ export class CartComponent implements OnInit {
   }
 
   cookiefinder(str:string): string{
-    var strx = str.split(', ');
+    var strx = str.split('; ');
     var found = ''
     for (var i = 0; i < strx.length; i++) {
         if(strx[i].includes('cart')){
