@@ -5,7 +5,9 @@ const controllers = require('../controllers/index.js')
 
 
 
-router.get('/:id', controllers.session.getSessionById);     
+
+router.post('/check', controllers.session.getSessionCheck);    
+  
       
       
 

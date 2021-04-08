@@ -14,8 +14,8 @@ export class ProductService {
      return this.http.get("http://localhost:5555/product")
 
   }
-  addproduct(title:string, category:string, price:string , pricePromo:string, producer: string,  imageUrl:string,  stock: string, description: string  ) {
-    return this.http.post("http://localhost:5555/product/create",{title, category, price, pricePromo,  producer, imageUrl, stock, description})
+  addproduct(title:string, category:string, price:string , pricePromo:string, producer: string,  imageUrl:string, description: string  ) {
+    return this.http.post("http://localhost:5555/product/create",{title, category, price, pricePromo,  producer, imageUrl, description})
 
   }
   DeleteProduct(id:string) {
