@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AdminComponent } from './components/admin/admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './components/cart/cart.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -28,4 +29,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
