@@ -197,67 +197,16 @@
           >
         </div>
       </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          style="color: white"
-        >
-          Brands
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="categorie"
-            >Lemonade - Natural, 591 Ml</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="categorie"
-          >
-            Pepper - Black, Whole</a
-          >
-          <a class="dropdown-item" routerLink="categorie"
-            >Raspberries - Fresh</a
-          >
-          <a class="dropdown-item" routerLink="categorie"
-            >Steampan - Half Size Shallow</a
-          >
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          style="color: white"
-        >
-          Organic & Natural
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="categorie"
-            >Coffee Swiss Choc Almond</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="categorie"
-          >
-            Corn Meal</a
-          >
-          <a class="dropdown-item" routerLink="categorie"
-            >Mushroom - Chanterelle Frozen</a
-          >
-          <a class="dropdown-item" routerLink="categorie"
-            >Wine - Magnotta, White</a
-          >
-        </div>
-      </li>
+      
+      
     </ul>
   </div>
-  <div class=" col-2 " style="float: right;">
+  <div *ngIf ='this.logged; then loggedIn else notlogged'></div>
+</nav>
+
+
+<ng-template #notlogged>
+  <div class=" col-2 " style="float: right;" >
     <a
       style="color: black; font-size: 16px; color: white;  padding: 10px; font-size: 25px;"
       routerLink="singin"
@@ -271,19 +220,43 @@
       style="color: white; font-size: 16px; border: none; padding: 10px; font-size: 25px;"
       >sign up
     </a>
-
-    <a
-      routerLink="cart"
-      style="
-        color: white;
-      "
-    >
-      <i
-        class="fas fa-cart-plus"
-        style="size: 12x;"
-        
-       
-      ></i>
-    </a>
   </div>
-</nav>
+  </ng-template>
+  
+  <ng-template #loggedIn>
+    <div class=" col-3 " style="float: right;margin-left: 40px;" >
+      <a
+        style="color: black; font-size: 16px; color: white;  padding: 10px; font-size: 20px;"
+        routerLink="profile"
+        routerLinkActive="active"
+      >
+        Profile
+      </a>
+      <a
+        routerLink="setting"
+        routerLinkActive="active"
+        style="color: white; font-size: 16px; border: none; padding: 10px; font-size: 20px;"
+        >settings
+      </a>
+    
+      
+      <a
+      (click) = "logout()"
+      style="color: white; font-size: 16px; border: none; padding: 10px; font-size: 20px;"
+      >logout
+    </a>
+    <a
+        routerLink="cart"
+        style="
+          color: white;
+        "
+      >
+        <i
+          class="fas fa-cart-plus"
+          style="size: 12x;margin-left: 45px;"
+          
+         
+        ></i>
+      </a>
+    </div>
+    </ng-template>
