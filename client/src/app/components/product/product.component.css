@@ -1,25 +1,23 @@
  .text-danger {
     color: red;
-    font-weight: 500;
-    font-size:300%;  
+    font-weight: 300;
+    font-size:200%;  
 } 
 #reduction_percent_display {
      color: red;
     font-weight: 500;
-    font-size:300%;  
+    font-size:150%;  
 }
 .text-grey {
-    color: green;
-    font-weight: 500;
-    font-size:200%;
+    font-size:100%;
 }
 .img-fluid{
-    width:80%;
-    border: 0.01em solid black;
+    width:40%;
+    margin-left: 40%;
 }
 .title{
-    font: 2em sans-serif;
-    color: green
+    font: 1.2em sans-serif;
+    
 }
 .quantityy {
     border: 1px solid;
