@@ -47,7 +47,7 @@ export class ItemCardComponent implements OnInit {
     }
   }
   cookiefinder(str:string): string{
-    var strx = str.split(', ');
+    var strx = str.split('; ');
     var found = ''
     for (var i = 0; i < strx.length; i++) {
         if(strx[i].includes('cart')){

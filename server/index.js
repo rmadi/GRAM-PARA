@@ -9,6 +9,14 @@ app.use(cors())
 app.use(cookieParser())
 app.use(express.json());
 app.use(express.static(__dirname + '/../client/dist/gram-para'));
+app.use('/admin',express.static(__dirname + '/../client/dist/gram-para'));
+app.use('/singin',express.static(__dirname + '/../client/dist/gram-para'));
+app.use('/register',express.static(__dirname + '/../client/dist/gram-para'));
+app.use('/cart/payment',express.static(__dirname + '/../client/dist/gram-para'));
+app.use('/admin/products',express.static(__dirname + '/../client/dist/gram-para'));
+app.use('/admin/addProduct',express.static(__dirname + '/../client/dist/gram-para'));
+app.use('/cart/ordercomplete',express.static(__dirname + '/../client/dist/gram-para'));
+
 
 app.use('/product', routes.product);
 app.use('/user', routes.user);

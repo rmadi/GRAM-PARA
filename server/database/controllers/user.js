@@ -72,7 +72,7 @@ findUser :  (req, res) => {
 
                          var session = auth.RandomString(32)
 
-                        auth.CreateSession(req,res,result[0]._id,session)
+                        auth.CreateSession(req,res,result[0]._id,session,result[0].role)
 
                       }else{
                         res.send({"message":"password wrong"});

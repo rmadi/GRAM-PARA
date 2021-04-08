@@ -1,4 +1,5 @@
 const Session = require('../models/index.js').session
+const User = require('../controllers/index').user
 
 module.exports = {
     find:   (cookie) => {
@@ -20,7 +21,8 @@ module.exports = {
              return
          }
          if(result.length >0){
-            res.send({"message":"success"})
+             req.params.id = result[0].userId
+             User.getUserById(req,res)
          }else{
             res.send({"message":"fail"})
          }

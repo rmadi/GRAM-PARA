@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {authentication} from '../../services/authentication.service'
 @Component({
   selector: 'app-singin',
@@ -10,7 +11,7 @@ export class SinginComponent implements OnInit {
 email : string = ""
 password : string = ""
 alertCheck:boolean=false;
-  constructor(private authservice: authentication) { }
+  constructor(private authservice: authentication, private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,17 +26,23 @@ alertCheck:boolean=false;
   onsubmit() {
     this.authservice.login(this.email, this.password).subscribe((data:any) => {
       console.log(data)
-      if(data.message == 'succeess'){
+      if(data.role == 'client'){
         document.location.href="/";
-          }else{
+      }else if(data.role == 'admin'){
+        window.location.href = window.location.origin+'/admin/products';
+      }{
         console.log('herer')
         this.alertCheck = true;
       }
     })
+
   }
 
  
+goToRegister() {
+  this.route.navigate(["register"])
 
+}
 
   
 }

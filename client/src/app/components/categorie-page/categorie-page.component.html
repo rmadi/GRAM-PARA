@@ -1,12 +1,11 @@
 <div class='container categories' >
-    <p style="font-size: 17px; color: #95a5a6;"> Home >> Skin >> Rakia </p>
 <div class="row" style="width: 120%;margin-top: 10px;">
             <div >
 
                 <div class="row">
                     <div *ngFor="let product of Pageproducts; let i = index">
                         <div class="col-md-4 try" style="margin-top: 15px;">
-                            <app-item-card [productTitle]="product.title" [Productprice] = "product.price" [productImage] = "product.imageUrl" [productId]  = "product._id" ></app-item-card>
+                          <app-item-card [productTitle]="product.title" [Productprice] = "product.price" [productImage] = "product.imageUrl" [productId]  = "product._id" ></app-item-card>
                         </div>
                     </div>
                

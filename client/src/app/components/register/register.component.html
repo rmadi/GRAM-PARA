@@ -1,14 +1,15 @@
 <form  >
 
-<div class="container register-form">
+<div class="container register-form" >
     <div class="form">
-        <div class="note" style="background-color: rgb(134, 14, 14);">
-            <p> Register please </p>
-        </div>
-
+     
         <div class="form-content">
+            <div class="note" >
+                <p> Register please </p>
+            </div>
+    
             <div class="row">
-                <div class="col-md-4">
+                <div class="col">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Your First Name *" id='firstName' (change)='this.changeData($event)'  />
                     </div>
@@ -22,12 +23,6 @@
                         <input type="text" class="form-control" placeholder="Role  Admin or client *" id='role' (change)='this.changeData($event)' />
 
                     </div>
-                   
-                  
-               
-
-                </div>
-                <div class="col-md-4">
                     <div class="form-group">
                         <input type="password" class="form-control" placeholder="Password *"id='password' (change)='this.changeData($event)'/>
                     </div>
@@ -40,8 +35,6 @@
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Zip code *" id='zipCode' (change)='this.changeData($event)' />
                     </div>
-                </div>
-                <div class="col-md-4">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="City *" id='city' (change)='this.changeData($event)'/>
                     </div>
@@ -51,10 +44,18 @@
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Adress 2 *"  id='adress2' (change)='this.changeData($event)'/>
                     </div>
-                       
+                   
+                  
+               
+
                 </div>
+             
             </div>
-            <button type="button" class="btnSubmit" (click)="postFrom()" >submit</button>
+            <div class="row justify-content-center ">
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-success" style="width: 180px;height: 50px;" (click)="postFrom()" >submit</button>
+                    </div>
+            </div>
         </div>
     </div>
 </div>

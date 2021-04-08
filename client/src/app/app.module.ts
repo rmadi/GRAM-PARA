@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoriePageComponent } from './components/categorie-page/categorie-page.component';
 import { ItemCardComponent } from './components/item-card/item-card.component';
@@ -22,6 +22,7 @@ import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
 import {ProfilePageComponent} from './components/profile-page/profile-page.component';
 import { SettingComponent } from './components/setting/setting.component';
+import { OrderCompleteComponent } from './components/order-complete/order-complete.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SettingComponent } from './components/setting/setting.component';
     RegisterComponent,
     SinginComponent,
     ProfilePageComponent,
-    SettingComponent
+    SettingComponent,
+    OrderCompleteComponent
 
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],

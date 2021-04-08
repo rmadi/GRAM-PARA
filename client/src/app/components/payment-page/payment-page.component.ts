@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../../services/product.service';
 import {PaymentService} from '../../services/payment.service';
-
+import {authentication} from '../../services/authentication.service'
 
 @Component({
   selector: 'app-payment-page',
@@ -12,19 +12,25 @@ export class PaymentPageComponent implements OnInit {
   total:any=0;
   products:any=[];
   cookie:any={};
-  address:string="1DasGxAbmd5edVMq3SHVrgtn2X2q8voftU"
+  address:string="3CgNgHE4VbgdeU1zDD7uPcjorvxmLefwY1"
   QrCodeLink:string="";
   paidBtc:boolean=false;
   MethodBtc:boolean=false;
   amountBtc:any=0;
   continuePage:boolean=false;
-  constructor(private prodservice: ProductService , private paymentservice: PaymentService) { }
+  firstName : string = '' ; lastName : string = '' ; email : string = '' ; city : string = '';address1 : string = '';zipCode : string = '';phone:string='';address2 : string = ''
+  constructor(private prodservice: ProductService , private paymentservice: PaymentService,private authenticationservice: authentication) { }
 
   ngOnInit(): void {
 
     
-    this.GetData()
+    var temp = document.cookie
     
+    if(temp.includes('GRAM')){
+     
+      this.getDataUser(this.cookiefinderuser(temp))
+    }
+    this.GetData()
   }
   GetData(){
     var cookies  = document.cookie;
@@ -63,9 +69,11 @@ export class PaymentPageComponent implements OnInit {
   }
 
   checkPayment(){
-
+    console.log("check")
       this.paymentservice.checkBtcPayment(this.address).subscribe((result)=>{
-        if(Number(result) >= this.amountBtc){
+        console.log(result)
+        console.log(Number(result))
+        if(Number(result) * 0.00000001>= this.amountBtc){
             this.paidBtc = true
             this.continuePage = true;
         }else if(this.MethodBtc){
@@ -76,16 +84,7 @@ export class PaymentPageComponent implements OnInit {
   }
  
 
-  cookiefinder(str:string): string{
-    var strx = str.split(', ');
-    var found = ''
-    for (var i = 0; i < strx.length; i++) {
-        if(strx[i].includes('cart')){
-           found =  strx[i].replace('cart=','')
-        }
-    }
-    return found
-  }
+  
 
   changeChek(value:string){
     if(value == 'bitcoin'){
@@ -97,4 +96,40 @@ export class PaymentPageComponent implements OnInit {
       this.continuePage = true;
     }
   }
+  
+getDataUser(cook:string){
+  this.authenticationservice.checkLog(cook).subscribe((res:any)=>{
+    console.log('s',res)
+
+      this.firstName = res.firstName
+      this.lastName = res.lastName
+      this.email = res.email
+      this.city = res.city
+      this.address1 = res.address1
+      this.zipCode  = res.zipCode
+      this.phone  = res.phoneNumber
+      this.address2 = res.address2
+  })
+}
+cookiefinder(str:string): string{
+  var strx = str.split('; ');
+  var found = ''
+  for (var i = 0; i < strx.length; i++) {
+      if(strx[i].includes('cart')){
+         found =  strx[i].replace('cart=','')
+      }
+  }
+  return found
+}
+cookiefinderuser(str:string): string{
+  var strx = str.split('; ');
+  var found = ''
+  for (var i = 0; i < strx.length; i++) {
+      if(strx[i].includes('GRAM')){
+         found =  strx[i].replace('GRAM=','')
+      }
+  }
+  return found
+}
+
 }
