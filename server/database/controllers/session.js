@@ -11,15 +11,25 @@ module.exports = {
     })
 },
 
- getSessionById :  (req,res) => { 
-     Session.findById(req.params.id,(err,result) => {
-        res.send(result)
+ getSessionCheck :  (req,res) => { 
+     console.log(req.body)
+     Session.find({"session":req.body.cookie},(err,result) => {
+         if(err){
+             console.log(err)
+             res.status(500).send()
+             return
+         }
+         if(result.length >0){
+            res.send({"message":"success"})
+         }else{
+            res.send({"message":"fail"})
+         }
+        
     })
 },
 
 
 addSession :  (id,session) => {
-    console.log ("ghgf")
    var  sessionAdd = new Session({
        userId: id,
        session: session,

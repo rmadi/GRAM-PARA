@@ -13,4 +13,10 @@ export class authentication {
   login(email : string , password : string) {
      return this.http.post("http://localhost:5555/user/signin",{email,password})
   }
+  checkLog(cookie:string){
+    return this.http.post("http://localhost:5555/session/check",{cookie})
+  }
+  logout(){
+    return this.http.get("http://localhost:5555/session/loggout")
+  }
 }
