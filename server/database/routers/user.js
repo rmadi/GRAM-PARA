@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const controllers = require('../controllers/index.js')
 
-
-
 router.get('/', controllers.user.getUser);
 
 router.get('/:id', controllers.user.getUserById);     
@@ -16,5 +14,4 @@ router.delete('/:id', controllers.user.deleteUserById);
 
 router.post('/signin', controllers.user.findUser)
        
-
 module.exports = router;

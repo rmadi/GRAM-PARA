@@ -15,7 +15,7 @@ export class addProductComponent implements OnInit {
   producer: string = ''
   imageUrl: string = ''
   description: string = ''
-  stock: string = ''
+  
   constructor(private prodservice: ProductService) { }
 
   ngOnInit(): void {}
@@ -40,15 +40,12 @@ export class addProductComponent implements OnInit {
     if((target as HTMLButtonElement).id == 'imageUrlaa'){
       this.imageUrl = (target as HTMLButtonElement).value
     }
-    if((target as HTMLButtonElement).id == 'stockaa'){
-      this.stock = (target as HTMLButtonElement).value
-    }
     if((target as HTMLButtonElement).id == 'descriptionaa'){
       this.description = (target as HTMLButtonElement).value
     }
   }
   addproducts() {
-    this.prodservice.addproduct(this.title, this.category,  this.price, this.pricePromo, this.producer, this.imageUrl,  this.stock, this.description).subscribe((data:any)=> {
+    this.prodservice.addproduct(this.title, this.category,  this.price, this.pricePromo, this.producer, this.imageUrl, this.description).subscribe((data:any)=> {
       console.log(data)
     })
   }
