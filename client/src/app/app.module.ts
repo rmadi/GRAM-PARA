@@ -7,9 +7,9 @@ import { CategoriePageComponent } from './components/categorie-page/categorie-pa
 import { ItemCardComponent } from './components/item-card/item-card.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
-import {ProductComponent} from './components/product/product.component';
+import { ProductComponent } from './components/product/product.component';
 import { FootbarComponent } from './components/footbar/footbar.component';
-import { RegisterComponent } from './components/register/register.component'
+import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -20,32 +20,19 @@ import { PaymentPageComponent } from './components/payment-page/payment-page.com
 import { addProductComponent } from './components/addProduct/addProduct.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { FormsModule } from '@angular/forms';
-import { ProfilePageComponent } from './components/profile-page/profile-page.component';
-
-
-
-
-  
+import {ProfilePageComponent} from './components/profile-page/profile-page.component';
+import { SettingComponent } from './components/setting/setting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     CategoriePageComponent,
     ItemCardComponent,
-
-
     NavbarComponent,
     ProductComponent,
     HomePageComponent,
     FootbarComponent,
-
-
-
     AdminComponent,
-
-
-
     AdminProductsComponent,
     AdminOrdersComponent,
     CartComponent,
@@ -54,15 +41,11 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
     RegisterComponent,
     SinginComponent,
     ProfilePageComponent,
+    SettingComponent
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -18,12 +18,15 @@
 
     </div>
     <div *ngFor="let product of products; let i = index" >
-        <div class="row product" style="border-bottom: 0.5px solid #b2bec3;padding: 15px;font-size: 17px;font-weight: 200;">
+        
+
+      
+        <div class="row product" style="border-bottom: 0.5px solid #b2bec3;padding: 15px;font-size: 17px;font-weight: 200;" >
             <div class="col-md-2">
                 <img src={{product.imageUrl}} height="120px" width="100px" />
             </div>
             <div class="col-md-2" style="margin:auto">
-                <p>{{product.title}}</p>
+             <p>{{product.title}}</p>
             </div>
             <div class="col-md-2" style="margin:auto" >
                 <p>{{product.price}} DT </p>
@@ -36,18 +39,23 @@
             </div>
     
         </div>
+    
     </div>
     
 </div>
-<div class="container" style="margin-bottom: 50px;">
+<div class="container-fluid" style="margin-bottom: 50px;">
     <div class="row justify-content-end">
-        <div class="col-2">
-                <div style="font-size: 24px;font-weight: 400;">
+        <div class="col-2" style="float:right;">
+                <div style="font-size: 18px;font-weight: 400;">
                     Total : {{total}} Dt
                 </div>
+                
                 <div>
-                    <button type="button" class="btn btn-primary" style="margin-top:10px">Continue</button>
+                    <a routerLink="payment">
+                     <button type="button" class="btn btn-primary" routerLink="payment" style="margin-top:10px"> Continue </button>
+                    </a>
                 </div>
+            
         </div>
     </div>
 </div>

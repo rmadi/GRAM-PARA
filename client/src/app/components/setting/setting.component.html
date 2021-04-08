@@ -1,0 +1,46 @@
+<form  >
+<div class="container register-form">
+    <div class="form">
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name... " id='firstNamee' (change)='this.changeData($event)'  />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name... " id='lastNamee' (change)='this.changeData($event)'/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email..." id='emaill' (change)='this.changeData($event)' />
+                    </div>  
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password..."id='passwordd' (change)='this.changeData($event)'/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="ZipCode..." id='zipCode' (change)='this.changeData($event)' />
+                    </div>
+                  </div>
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="PhoneNumber..."  id='phone' (change)='this.changeData($event)'/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="City..." id='city' (change)='this.changeData($event)'/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Adress 1..." id='adress1' (change)='this.changeData($event)' />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Adress 2..."  id='adress2' (change)='this.changeData($event)'/>
+                    </div>
+                       
+                </div>
+            </div>
+            <button type="button" class="button" (click)="editUser()" >submit</button>
+        </div>
+    </div>
+</div>
+</form>
+
+
