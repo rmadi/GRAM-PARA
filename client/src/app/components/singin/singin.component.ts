@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {authentication} from '../../services/authentication.service'
 @Component({
   selector: 'app-singin',
@@ -9,7 +10,8 @@ export class SinginComponent implements OnInit {
 
 email : string = ""
 password : string = ""
-  constructor(private authservice: authentication) { }
+  constructor(private authservice: authentication,
+    private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,12 +25,18 @@ password : string = ""
   }
   onsubmit() {
     this.authservice.login(this.email, this.password).subscribe((data) => {
-      console.log(data)
+      console.log(data);
+      this.route.navigate(["register"])
+      this.goToRegister()
     })
+
   }
 
  
+goToRegister() {
+  this.route.navigate(["register"])
 
+}
 
   
 }
