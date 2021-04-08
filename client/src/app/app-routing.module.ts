@@ -11,20 +11,19 @@ import { ProductComponent } from './components/product/product.component';
 
 import { addProductComponent } from './components/addProduct/addProduct.component';
 import { AdminProductsComponent } from './components/admin-products/admin-products.component';
+import { CategoriePageComponent } from './components/categorie-page/categorie-page.component';
 const routes: Routes = [
  
   {path: '', component:HomePageComponent},
-  {path: 'home', component:HomePageComponent},
  {path:'product/:id', component:ProductComponent},
-
-  {path: 'register', component:RegisterComponent},
+{path: 'register', component:RegisterComponent},
   {path: 'singin', component:SinginComponent},
   {path: 'cart', component:CartComponent},
   {path:'payment', component:PaymentPageComponent},
   {path: 'admin', component:AdminComponent},
-  
-  {path:'addProduct', component:addProductComponent},
-  // {path: '**', redirectTo:''}
+ {path:'addProduct', component:addProductComponent},
+ {path:'admin', redirectTo:'admin', pathMatch:'full'},
+ {path:'categorie', component:CategoriePageComponent},
 
 ];
 
